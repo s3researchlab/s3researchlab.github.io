@@ -44,6 +44,12 @@ jobs:
       run: npm run build
 
     - if: steps.releaser.outputs.newVersion == 'true'
-      uses: stefanzweifel/git-auto-commit-action@v4
+      name: Add .nojekyll file
+      run: touch ./out/.nojekyll
+
+    - if: steps.releaser.outputs.newVersion == 'true'
+      name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
-        commit_message: Automated publish
+        branch: gh-pages
+        folder: out
