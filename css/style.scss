@@ -1,3 +1,43 @@
+html{
+    // background-color: rgba(22, 20, 25);
+    background-color: #120B1C !important;
+}
 body{
-    padding-top: 70px;
+    padding-top: 100px;
+    // background-color: rgba(22, 20, 25) !important;
+    background-color: transparent !important;
+    color: #D5DCEA;
+}
+
+header{
+    border-bottom: 1px solid #1A1A1A;
+}
+
+.navbar{
+
+    background-color: #120B1C !important;
+
+    .navbar-brand{
+        color: #D5DCEA !important;
+    }
+
+    .nav-link{
+        color: #D5DCEA !important;
+    }
+}
+
+.text-primary{
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-image: linear-gradient(45deg, #7928CA, #FF0080);
+}
+
+.btn-grad-primary{
+    color: white;
+    border: 1px solid white;
+    // background-image: linear-gradient(-30deg, #7928CA, #FF0080);
+
 }
