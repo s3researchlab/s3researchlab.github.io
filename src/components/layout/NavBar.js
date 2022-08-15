@@ -28,13 +28,16 @@ function NavBar() {
 
     return (
         <Navbar expand="md" fixed="top" id="sideNav" bg="light">
-            <Container >
-                <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
+            <Container className="py-2">
+
+                <img className="img-fluid d-block " src="images/logo-long-name-transparent.png" width={500} />
+                {/* <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand> */}
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/team">Team</NavLink>
+                        <NavLink href="/projects">Projects</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact-us">Contact Us</NavLink>
                     </Nav>
