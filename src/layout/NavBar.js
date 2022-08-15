@@ -18,11 +18,9 @@ function NavLink({ href, exact, children }) {
     }
 
     return <>
-        <li className="nav-item">
-            <Link href={href}>
-                <a className={`nav-link ${isActive}`}>{children}</a>
-            </Link>
-        </li>
+        <Link href={href}>
+            <a className={`nav-link ${isActive}`}>{children}</a>
+        </Link>
     </>;
 }
 
@@ -34,12 +32,12 @@ function NavBar() {
                 <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <ul className="navbar-nav">
+                    <Nav className="me-auto">
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/people">People</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact-us">Contact Us</NavLink>
-                    </ul>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
