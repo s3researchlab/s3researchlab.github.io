@@ -42,3 +42,8 @@ jobs:
 
     - if: steps.releaser.outputs.newVersion == 'true'
       run: npm run build
+
+    - if: steps.releaser.outputs.newVersion == 'true'
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Automated publish
