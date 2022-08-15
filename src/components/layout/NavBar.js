@@ -34,7 +34,7 @@ function NavBar() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
                         <NavLink href="/" exact>Home</NavLink>
-                        <NavLink href="/people">People</NavLink>
+                        <NavLink href="/team">Team</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact-us">Contact Us</NavLink>
                     </Nav>

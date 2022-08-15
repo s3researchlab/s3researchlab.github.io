@@ -4,7 +4,7 @@ function PeoplePage() {
     return (
         <>
 
-            <p>People</p>
+            <p>Team</p>
 
         </>
     );
