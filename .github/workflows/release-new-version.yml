@@ -36,3 +36,9 @@ jobs:
         # files: "*"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - if: steps.releaser.outputs.newVersion == 'true'
+      run: npm ci
+
+    - if: steps.releaser.outputs.newVersion == 'true'
+      run: npm run build

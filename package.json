@@ -12,7 +12,7 @@
     "scripts": {
         "dev": "npm run lint-fix && next dev",
         "lint": "npx eslint .",
-        "export": "next build && next export -o html/",
+        "build": "next build && next export -o docs/",
         "lint-fix": "npx eslint . --fix"
     },
     "devDependencies": {
