@@ -31,8 +31,8 @@ function NavBar() {
             <Container fluid>
                 <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
                 <Navbar.Toggle aria-controls="top-navbar" />
-                <Navbar.Collapse id="top-navbar">
-                    <Nav className="me-auto">
+                <Navbar.Collapse id="top-navbar" className="justify-content-end">
+                    <Nav>
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/people">People</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
