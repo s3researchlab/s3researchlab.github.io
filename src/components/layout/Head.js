@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Package from "../../package.json";
+import Package from "../../../package.json";
 
 function Component({page}) {
 
