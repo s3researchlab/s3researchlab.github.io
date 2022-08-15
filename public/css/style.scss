@@ -1,21 +1,16 @@
 html{
-    // background-color: rgba(22, 20, 25);
     background-color: #120B1C !important;
 }
 body{
-    padding-top: 100px;
-    // background-color: rgba(22, 20, 25) !important;
+    margin-top: 110px;
     background-color: transparent !important;
     color: #D5DCEA;
-}
-
-header{
-    border-bottom: 1px solid #1A1A1A;
 }
 
 .navbar{
 
     background-color: #120B1C !important;
+    border-bottom: 1px solid #1A1A1A;
 
     .navbar-brand{
         color: #D5DCEA !important;
