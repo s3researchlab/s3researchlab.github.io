@@ -18,26 +18,28 @@ function NavLink({ href, exact, children }) {
     }
 
     return <>
-        <Link href={href}>
-            <a className={`nav-link ${isActive}`} >{children}</a>
-        </Link>
+        <li className="nav-item">
+            <Link href={href}>
+                <a className={`nav-link ${isActive}`}>{children}</a>
+            </Link>
+        </li>
     </>;
 }
 
 function NavBar() {
 
     return (
-        <Navbar expand="md" fixed="top" id="sideNav" bg="light">
+        <Navbar collapseOnSelect expand="md" fixed="top" id="sideNav" bg="light">
             <Container fluid>
                 <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
-                <Navbar.Toggle aria-controls="top-navbar" />
-                <Navbar.Collapse id="top-navbar" className="justify-content-end">
-                    <Nav>
+                <Navbar.Toggle />
+                <Navbar.Collapse className="justify-content-end">
+                    <ul class="navbar-nav mr-auto">
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/people">People</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact-us">Contact Us</NavLink>
-                    </Nav>
+                    </ul>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
