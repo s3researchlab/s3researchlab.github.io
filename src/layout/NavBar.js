@@ -34,7 +34,7 @@ function NavBar() {
                 <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <ul class="navbar-nav mr-auto">
+                    <ul className="navbar-nav">
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/people">People</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
