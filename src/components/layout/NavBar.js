@@ -27,12 +27,12 @@ function NavLink({ href, exact, children }) {
 function NavBar() {
 
     return (
-        <Navbar collapseOnSelect expand="md" fixed="top" id="sideNav" bg="light">
-            <Container fluid>
+        <Navbar expand="md" fixed="top" id="sideNav" bg="light">
+            <Container >
                 <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Nav className="me-auto">
+                    <Nav>
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/people">People</NavLink>
                         <NavLink href="/publications">Publications</NavLink>

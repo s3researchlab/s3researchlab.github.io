@@ -1,4 +1,4 @@
-import getConfig from "next/config";
+import Script from "next/script";
 
 const injectGA = () => {
 
@@ -11,19 +11,20 @@ const injectGA = () => {
 
     gtag("js", new Date());
 
-    gtag("config", "G-EZ36G6P3MT");
+    // gtag("config", "G-EZ36G6P3MT");
 };
 
 function Footer() {
 
     return (
-        <div>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossOrigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></script>
-            <script src="js/script.js"/>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNGSCV50W9"></script>
-            <script>{injectGA()}</script>
-        </div>
+        <footer>
+            <Script src="https://code.jquery.com/jquery-3.6.0.min.js" crossOrigin="anonymous"></Script>
+
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-HNGSCV50W9"></Script>
+            <Script>{injectGA()}</Script>
+
+            <Script src="js/script.js"/>
+        </footer>
     );
 }
 

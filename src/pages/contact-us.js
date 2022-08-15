@@ -6,8 +6,6 @@ function ContactUsPage() {
 
             <p>Contact Us</p>
 
-            Form
-
         </>
     );
 }
