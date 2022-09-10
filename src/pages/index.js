@@ -12,7 +12,7 @@ function IndexPage() {
 
                         <h3 class="mb-5">Our goal is to research the use of smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</h3>
 
-                        <button className="btn btn-grad-primary">Explore</button>
+                        <button className="btn btn-grad-primary">Explore Projects</button>
                     </Col>
 
                 </Row>
