@@ -1,13 +1,13 @@
+import Layout from "../components/layout/Layout";
 
-function PeoplePage() {
+function TeamPage() {
 
     return (
-        <>
+        <Layout title="Team">
 
-            <p>Team</p>
 
-        </>
+        </Layout>
     );
 }
 
-export default PeoplePage;
+export default TeamPage;

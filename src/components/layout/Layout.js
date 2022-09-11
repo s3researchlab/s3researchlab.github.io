@@ -1,4 +1,4 @@
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Head from "./Head";
 import NavBar from "./NavBar";
@@ -10,12 +10,13 @@ function Layout({ children, title, menu }) {
 
     return (
         <>
-            <Head page={title} />
+            <Head title={menu} />
             <header>
                 <NavBar />
             </header>
             <main>
                 <Container>
+                    <h5 className="text-primary mb-3">{title}</h5>
                     {children}
                 </Container>
             </main>

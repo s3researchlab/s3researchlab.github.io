@@ -1,12 +1,11 @@
+import Layout from "../components/layout/Layout";
 
 function PublicationsPage() {
 
     return (
-        <>
+        <Layout title="Publications">
 
-            <p>Publications</p>
-
-        </>
+        </Layout>
     );
 }
 

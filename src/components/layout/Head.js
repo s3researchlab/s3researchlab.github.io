@@ -2,15 +2,16 @@ import Head from "next/head";
 
 import Package from "../../../package.json";
 
-function Component({page}) {
+function Component({ title }) {
 
-    const title = `${Package.author}`;
+    title = title == "Home" ? "" : title;
+    title = title ? `${title} - ` : "";
 
     return (
         <Head>
-            <meta charSet="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <title>S3 Research Lab</title>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>{`${title} S3 Research Lab`}</title>
 
             <meta name="author" content={Package.author} />
             <meta name="description" content={Package.description} />
@@ -20,7 +21,7 @@ function Component({page}) {
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-            <meta name="apple-mobile-web-app-title" content={Package.author}/>
+            <meta name="apple-mobile-web-app-title" content={Package.author} />
 
             {/* <link rel="apple-touch-icon" sizes="180x180" href="images/profile.jpg"/>
             <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.jpg"/>

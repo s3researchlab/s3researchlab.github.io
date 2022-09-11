@@ -36,3 +36,17 @@ body{
     // background-image: linear-gradient(-30deg, #7928CA, #FF0080);
 
 }
+
+.leading-10{
+    font-size: 3.75rem!important;
+}
+
+.opa{
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-image: linear-gradient(45deg, #ff5543, #a112ff);
+
+}
