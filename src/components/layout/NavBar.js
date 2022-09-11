@@ -28,11 +28,12 @@ function NavBar() {
 
     return (
         <Navbar expand="md" fixed="top" id="sideNav" bg="light">
-            <Container className="py-2">
+            <Container className="">
 
-                <img className="img-fluid d-block " src="images/logo-long-name-transparent.png" width={400} />
-                {/* <Navbar.Brand href="/">S3 Research Lab</Navbar.Brand> */}
-                <Navbar.Toggle />
+                <img className="img-fluid" src="images/logo-long-name-transparent.png" width={230} />
+
+                <Navbar.Toggle/>
+
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
                         <NavLink href="/" exact>Home</NavLink>

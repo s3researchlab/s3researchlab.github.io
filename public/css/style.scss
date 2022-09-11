@@ -2,7 +2,7 @@ html{
     background-color: #120B1C !important;
 }
 body{
-    margin-top: 110px;
+    margin-top: 80px;
     background-color: transparent !important;
     color: #D5DCEA;
 }
@@ -18,6 +18,10 @@ body{
 
     .nav-link{
         color: #D5DCEA !important;
+
+        &.active{
+            color: #7928CA !important;
+        }
     }
 }
 
@@ -27,7 +31,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    background-image: linear-gradient(45deg, #7928CA, #FF0080);
+    background-image: linear-gradient(25deg, #7928CA, #FF0080);
 }
 
 .btn-grad-primary{
