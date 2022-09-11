@@ -27,10 +27,12 @@ function NavLink({ href, exact, children }) {
 function NavBar() {
 
     return (
-        <Navbar expand="md" fixed="top" id="sideNav" bg="light">
-            <Container className="">
+        <Navbar expand="lg" fixed="top" id="sideNav" bg="light">
+            <Container>
 
-                <img className="img-fluid" src="images/logo-long-name-transparent.png" width={230} />
+                <a className="navbar-brand" href="/">
+                    <img className="img-fluid" src="images/logo-long-name.png" />
+                </a>
 
                 <Navbar.Toggle/>
 
@@ -39,7 +41,7 @@ function NavBar() {
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/team">Team</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
-                        <NavLink href="/publications">Publications</NavLink>
+                        <NavLink href="http://websites.umich.edu/~thiagod/publications">Publications</NavLink>
                         <NavLink href="/contact-us">Contact Us</NavLink>
                     </Nav>
                 </Navbar.Collapse>

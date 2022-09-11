@@ -5,6 +5,8 @@ function ProjectsPage() {
     return (
         <Layout title="Projects">
 
+            <p>Coming up soon!</p>
+
         </Layout>
     );
 }

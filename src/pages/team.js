@@ -6,6 +6,12 @@ function TeamPage() {
         <Layout title="Team">
 
 
+            <h4>Principal Investigators</h4>
+
+
+
+            <h4>Undergraduate Students</h4>
+
         </Layout>
     );
 }
