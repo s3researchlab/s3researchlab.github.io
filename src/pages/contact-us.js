@@ -8,7 +8,7 @@ function ContactUsPage() {
             <Row>
                 <Col sm="12" md="6">
 
-                    <p>SE Research Lab is currently housed in the College of Innovation &amp; Technology at the University of Michigan-Flint</p>
+                    <p>We're are currently housed in the <a href="https://www.umflint.edu/cit/">College of Innovation &amp; Technology</a> at <a href="https://www.umflint.edu/"> University of Michigan-Flint</a></p>
 
                     <hr/>
 
