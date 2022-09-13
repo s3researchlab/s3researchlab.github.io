@@ -14,7 +14,7 @@ function Member({ name, description, img, url }) {
     return <a href={url} target="_blank">
         <img className="rounded mb-2 img-fluid" src={`images/profile-photo/${img}`} width={180} />
         <p className="text-light mb-0">{name}</p>
-        <p className="tiny mb-3 text-muted">{description}</p>
+        <p className="small mb-3 text-muted">{description}</p>
     </a>;
 }
 
