@@ -1,38 +1,95 @@
-html{
+html {
     background-color: #120B1C !important;
 }
-body{
-    margin-top: 110px;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin-top: 90px;
     background-color: transparent !important;
     color: #D5DCEA;
 }
 
-.navbar{
+p{
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 400 !important;
+}
+
+a{
+    color: #3291ff;
+    text-decoration: none;
+}
+
+.tiny {
+    font-size: 0.775em;
+}
+
+.navbar {
 
     background-color: #120B1C !important;
     border-bottom: 1px solid #1A1A1A;
 
-    .navbar-brand{
+    .navbar-brand {
+
         color: #D5DCEA !important;
+
+        img {
+            @media (min-width: 575.98px) {
+                width: 300px !important;
+            }
+
+            @media (max-width: 575.98px) {
+                width: 200px !important;
+            }
+        }
     }
 
-    .nav-link{
-        color: #D5DCEA !important;
+    .nav-link {
+
+        color: gray !important;
+
+        &.active {
+            color: #D5DCEA !important;
+
+        }
+    }
+
+    .navbar-toggler {
+
+        border-color: #D5DCEA !important;
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
     }
 }
 
-.text-primary{
+.text-primary {
 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    background-image: linear-gradient(45deg, #7928CA, #FF0080);
+    background-image: linear-gradient(25deg, #7928CA, #FF0080);
 }
 
-.btn-grad-primary{
+.btn-grad-primary {
     color: white;
     border: 1px solid white;
     // background-image: linear-gradient(-30deg, #7928CA, #FF0080);
+
+}
+
+.leading-10 {
+    font-size: 3.75rem !important;
+}
+
+.opa {
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-image: linear-gradient(45deg, #ff5543, #a112ff);
 
 }
