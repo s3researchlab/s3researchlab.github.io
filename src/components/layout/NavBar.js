@@ -45,7 +45,7 @@ function NavBar() {
                         <NavLink href="/contact">Contact</NavLink>
                     </Nav>
                     <Link href="/join-us">
-                        <a class="btn btn-sm btn-primary">Join Us</a>
+                        <a className="btn btn-sm btn-primary">Join Us</a>
                     </Link>
                 </Navbar.Collapse>
             </Container>

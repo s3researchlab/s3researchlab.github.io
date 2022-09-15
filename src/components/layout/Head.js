@@ -23,6 +23,11 @@ function Component({ title }) {
             <meta name="apple-mobile-web-app-status-bar-style" content="black" />
             <meta name="apple-mobile-web-app-title" content={Package.author} />
 
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"/>
+            <link rel="manifest" href="/images/favicons/site.webmanifest"/>
+
             <meta property="og:title" content={Package.author} />
             <meta property="og:url" content={Package.homepage} />
             <meta property="og:description" content={Package.description} />
