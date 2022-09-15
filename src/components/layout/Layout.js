@@ -16,7 +16,7 @@ function Layout({ children, title, menu }) {
             </header>
             <main>
                 <Container>
-                    <h5 className="text-primary mb-3">{title}</h5>
+                    <h5 className="mb-3">{title}</h5>
                     {children}
                 </Container>
             </main>

@@ -1,10 +1,10 @@
 import { Row, Col } from "react-bootstrap";
 import Layout from "../components/layout/Layout";
 
-function ContactUsPage() {
+function ContactPage() {
 
     return (
-        <Layout title="Contact Us">
+        <Layout title="Contact">
             <Row>
                 <Col sm="12" md="6">
 
@@ -30,4 +30,4 @@ function ContactUsPage() {
     );
 }
 
-export default ContactUsPage;
+export default ContactPage;

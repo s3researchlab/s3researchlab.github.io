@@ -34,16 +34,19 @@ function NavBar() {
                     <img className="img-fluid" src="images/logo-long-name.png" />
                 </a>
 
-                <Navbar.Toggle/>
+                <Navbar.Toggle />
 
                 <Navbar.Collapse className="justify-content-end">
-                    <Nav>
+                    <Nav className="me-2">
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/team">Team</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
                         <NavLink href="http://websites.umich.edu/~thiagod/publications">Publications</NavLink>
-                        <NavLink href="/contact-us">Contact Us</NavLink>
+                        <NavLink href="/contact">Contact</NavLink>
                     </Nav>
+                    <Link href="/join-us">
+                        <a class="btn btn-sm btn-primary">Join Us</a>
+                    </Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
