@@ -44,7 +44,7 @@ function IndexPage() {
 
     return (
         <Layout menu="Home">
-            <div className="text-center" style={{"paddingTop": "7rem"}}>
+            <div className="text-center banner">
                 <div className="mb-5">
                     <h1 className="lg fw-bold gradient">{technologies[index]}</h1>
                     <h1 className="lg fw-lighter">applied to software systems development</h1>
