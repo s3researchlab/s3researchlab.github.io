@@ -31,7 +31,7 @@ function Component({ title }) {
             <meta property="og:title" content={Package.author} />
             <meta property="og:url" content={Package.homepage} />
             <meta property="og:description" content={Package.description} />
-            <meta property="og:image" content="images/profile.jpg" />
+            <meta property="og:image" content="/images/favicons/favicon-32x32.png" />
             <meta property="og:locale" content="en_US" />
             <meta property="og:locale:alternate" content="pt_BR" />
 
