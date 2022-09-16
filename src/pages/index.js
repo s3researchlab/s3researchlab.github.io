@@ -47,15 +47,15 @@ function IndexPage() {
             <div className="text-center banner">
                 <div className="mb-5">
                     <h1 className="lg fw-bold gradient">{technologies[index]}</h1>
-                    <h1 className="lg fw-lighter">applied to software systems development</h1>
+                    <h1 className="lg">applied to software systems development</h1>
                 </div>
                 <p className="mb-5">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
                 <div className="mb-5">
                     <Link href="./projects">
                         <a className="btn btn-primary me-3">Explore Projects</a>
                     </Link>
-                    <Link href="./team">
-                        <a className="btn btn-outline-primary">Meet Us</a>
+                    <Link href="./join-us">
+                        <a className="btn btn-outline-primary">Join Us</a>
                     </Link>
                 </div>
                 <div>

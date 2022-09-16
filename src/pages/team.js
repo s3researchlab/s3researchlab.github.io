@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 function Section({ children }) {
 
     return <>
-        <h4 className="mb-3">{children}</h4>
+        <h5 className="mb-3">{children}</h5>
         <hr className="pb-2" />
     </>;
 }

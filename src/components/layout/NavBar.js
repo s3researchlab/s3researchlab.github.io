@@ -41,7 +41,7 @@ function NavBar() {
                         <NavLink href="/" exact>Home</NavLink>
                         <NavLink href="/team">Team</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
-                        <NavLink href="http://websites.umich.edu/~thiagod/publications">Publications</NavLink>
+                        <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact">Contact</NavLink>
                     </Nav>
                     <Link href="/join-us">
