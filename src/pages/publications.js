@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import Layout from "../components/layout/Layout";
 import CollapseGroup from "../components/CollapseGroup";
@@ -84,6 +85,8 @@ function filterOut(array, searchTerm = "") {
 
 function PublicationsPage({ entries }) {
 
+    const router = useRouter();
+
     const [publicationType, setPublicationType] = useState("year");
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -92,7 +95,14 @@ function PublicationsPage({ entries }) {
     }
 
     function handleSearchTerm(event) {
-        setSearchTerm(event.target.value);
+
+        const value = event.target.value;
+
+        router.replace({
+            query: { ...router.query, q: value },
+        });
+
+        setSearchTerm(value);
     }
 
     let items = filterOut(entries.formatted, searchTerm);
@@ -109,7 +119,7 @@ function PublicationsPage({ entries }) {
                     <p>This is not the full list. I will update it as soon as possible.</p>
                 </div>
                 <div className="col-12 col-md-auto">
-                    <form autoComplete="off" className="mb-3">
+                    <div autoComplete="off" className="mb-3" action="#">
                         <div className="d-flex justify-content-start">
                             <div className="me-2">
                                 <select className="form-select form-select-sm" value={publicationType} onChange={handlePublicationType}>
@@ -121,7 +131,7 @@ function PublicationsPage({ entries }) {
                                 <input type="search" className="form-control form-control-sm" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 
