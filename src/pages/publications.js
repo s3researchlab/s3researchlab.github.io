@@ -104,21 +104,26 @@ function PublicationsPage({ entries }) {
     return (
         <Layout title="Publications">
 
-            <p>This is not the full list. I will update it as soon as possible.</p>
-
-            <form autoComplete="off" className="mb-3">
-                <div className="d-flex justify-content-start">
-                    <div className="me-2">
-                        <select className="form-select form-select-sm" value={publicationType} onChange={handlePublicationType}>
-                            <option value="year">Year</option>
-                            <option value="annote">Type</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="search" className="form-control form-control-sm" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
-                    </div>
+            <div className="row">
+                <div className="col-12 col-md">
+                    <p>This is not the full list. I will update it as soon as possible.</p>
                 </div>
-            </form>
+                <div className="col-12 col-md-auto">
+                    <form autoComplete="off" className="mb-3">
+                        <div className="d-flex justify-content-start">
+                            <div className="me-2">
+                                <select className="form-select form-select-sm" value={publicationType} onChange={handlePublicationType}>
+                                    <option value="year">Year</option>
+                                    <option value="annote">Type</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="search" className="form-control form-control-sm" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
             {groupsAsHtml}
 

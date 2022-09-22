@@ -1,7 +1,7 @@
 {
     "name": "s3researchlab.github.io",
     "description": "Smart Software Systems Research Lab",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "author": "S3 Research Lab",
     "license": "MIT",
     "homepage": "s3researchlab.github.io",
@@ -16,19 +16,19 @@
         "lint-fix": "npx eslint . --fix"
     },
     "devDependencies": {
-        "@babel/eslint-parser": "7.18.9",
-        "@next/eslint-plugin-next": "12.2.5",
-        "eslint": "8.22.0"
+        "@babel/eslint-parser": "7.19.1",
+        "@next/eslint-plugin-next": "12.3.1",
+        "eslint": "8.23.1"
     },
     "dependencies": {
         "academicons": "1.9.2",
         "bibtex-parse": "2.1.0",
-        "bootstrap": "5.2.0",
+        "bootstrap": "5.2.1",
         "bootstrap-icons": "1.9.1",
-        "next": "12.2.5",
+        "next": "12.3.1",
         "react": "18.2.0",
         "react-bootstrap": "2.5.0",
         "react-dom": "18.2.0",
-        "sass": "1.54.4"
+        "sass": "1.55.0"
     }
 }
