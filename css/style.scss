@@ -41,6 +41,12 @@ h5{
     @media (min-width: 575.98px) {
        padding-top: 7rem !important;
     }
+
+    .btn{
+        @media (min-width: 575.98px) {
+            min-width: 150px;
+         }
+    }
 }
 
 .lg {
@@ -109,8 +115,8 @@ h5{
     border-color: #8471FB;
 
     &:hover{
-        background-color: darken(#8471FB, 5%);
-        border-color: #8471FB;
+        background-color: darken(#8471FB, 8%) !important;
+        border-color: #8471FB !important;
     }
 }
 
@@ -120,8 +126,8 @@ h5{
     border-color: #8471FB;
 
     &:hover{
-        background-color: #8471FB;
-        border-color: #8471FB;
+        background-color: #8471FB !important;
+        border-color: #8471FB !important;
     }
 }
 
