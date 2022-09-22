@@ -11,7 +11,7 @@ const injectGA = () => {
 
     gtag("js", new Date());
 
-    // gtag("config", "G-EZ36G6P3MT");
+    gtag("config", "G-S1P93RNMN0");
 };
 
 function Footer() {
