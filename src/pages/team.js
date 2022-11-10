@@ -52,7 +52,10 @@ function TeamPage() {
 
             <Section>Affiliated Faculty Members</Section>
 
-            <Group></Group>
+            <Group>
+            <Member name="Jeffrey Yackley" description="University of Michigan-Flint" img="jeff.jpg" url="http://umich.edu/~jyackley" />
+
+            </Group>
 
             <Section>Current Undergraduate Students</Section>
 
