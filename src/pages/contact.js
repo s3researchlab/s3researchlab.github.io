@@ -13,8 +13,7 @@ function ContactPage() {
                     <hr/>
 
                     <address>
-                        <strong>College of Innovation &amp; Technology</strong><br />
-                        University of Michigan-Flint<br />
+                        510 Murchie Science Building<br/>
                         303 E. Kearsley Street <br />
                         Flint, Michigan 48502-1950, USA<br />
                     </address>

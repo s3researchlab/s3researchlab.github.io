@@ -18,8 +18,7 @@ function NavLink({ href, exact, children }) {
     }
 
     return <>
-        <Link href={href}>
-            <a className={`nav-link ${isActive}`}>{children}</a>
+        <Link href={href} className={`nav-link ${isActive}`}>{children}
         </Link>
     </>;
 }
@@ -44,8 +43,7 @@ function NavBar() {
                         <NavLink href="/publications">Publications</NavLink>
                         <NavLink href="/contact">Contact</NavLink>
                     </Nav>
-                    <Link href="/join-us">
-                        <a className="btn btn-sm btn-primary">Join Us</a>
+                    <Link href="/join-us" className="btn btn-sm btn-primary">Join Us
                     </Link>
                 </Navbar.Collapse>
             </Container>

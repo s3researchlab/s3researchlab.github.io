@@ -14,10 +14,8 @@ const technologies = [
 function SocialIcon({ href, icon, children }) {
 
     return (
-        <Link href={href}>
-            <a target="_blank" style={{"color": "white"}}>
+        <Link href={href} target="_blank" style={{"color": "white"}}>
                 <i className={`${icon} me-2 `}  ></i> {children}
-            </a>
         </Link>
     );
 }
@@ -51,11 +49,9 @@ function IndexPage() {
                 </div>
                 <p className="mb-5 text-center">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
                 <div className="mb-5">
-                    <Link href="./projects">
-                        <a className="btn btn-primary me-3">Explore Projects</a>
+                    <Link href="./projects" className="btn btn-primary me-3">Explore Projects
                     </Link>
-                    <Link href="./join-us">
-                        <a className="btn btn-outline-primary">Join Us</a>
+                    <Link href="./join-us" className="btn btn-outline-primary">Join Us
                     </Link>
                 </div>
                 <div>
