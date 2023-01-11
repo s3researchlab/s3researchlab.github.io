@@ -116,7 +116,7 @@ function PublicationsPage({ entries }) {
 
             <div className="row">
                 <div className="col-12 col-md">
-                    <p className="text-muted">This is not the full list. I will update it as soon as possible.</p>
+                    <p className="text-muted">This is not the full list. We will update it as soon as possible.</p>
                 </div>
                 <div className="col-12 col-md-auto">
                     <div autoComplete="off" className="mb-3" action="#">

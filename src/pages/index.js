@@ -49,10 +49,8 @@ function IndexPage() {
                 </div>
                 <p className="mb-5 text-center text-muted">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
                 <div className="mb-5">
-                    <Link href="./projects" className="btn btn-primary me-3">Explore Projects
-                    </Link>
-                    <Link href="./join-us" className="btn btn-outline-primary">Join Us
-                    </Link>
+                    <Link href="./projects" className="btn btn-primary">Explore Projects</Link>
+                    {/* <Link href="./projects" className="btn btn-outline-primary">Join Us</Link> */}
                 </div>
                 <div>
                     <SocialIcon icon="bi bi-github" href="https://github.com/s3researchlab">GitHub</SocialIcon>

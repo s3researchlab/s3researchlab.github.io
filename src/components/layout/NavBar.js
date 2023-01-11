@@ -35,7 +35,7 @@ function NavBar() {
                         </a>
                     </div>
                     <div>
-                        <Link href="/join-us" className="btn btn-primary">Join Us</Link>
+                        <Link href="/projects" className="btn btn-primary">Join Us</Link>
                     </div>
                 </Container>
             </div>
