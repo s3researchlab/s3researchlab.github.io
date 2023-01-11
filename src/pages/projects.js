@@ -14,8 +14,6 @@ function ProjectsPage() {
     return (
         <Layout title="Projects">
 
-            {/* <p className="text-muted">Coming up soon!</p> */}
-
             <p>We're always looking for talented, motivated people to join us. If you're interested in the things we do and you'd like to join us, or visit our lab, please reach out to the principal investigator. See below the current opportunities in our lab.</p>
 
             <Section>Ph.D. Research Projects</Section>

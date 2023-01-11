@@ -21,7 +21,7 @@ function Member({ name, description, img, url }) {
 function Group({ children }) {
 
     if(!children){
-        children = <p className="text-muted">To be Announced</p>;
+        children = <p>To be Announced</p>;
     }
 
     if (!Array.isArray(children)) {

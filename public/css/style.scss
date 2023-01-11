@@ -254,6 +254,10 @@ h5 {
     }
 }
 
+hr{
+    border-color: white !important;
+}
+
 input, select{
     color: $dracula-muted !important;
     background-color: $dracula-current-line !important;
@@ -261,5 +265,9 @@ input, select{
 
     &:focus{
         border-color: $dracula-muted !important;
+    }
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $dracula-muted !important;
     }
 }
