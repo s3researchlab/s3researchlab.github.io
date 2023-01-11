@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 function Section({ children }) {
 
     return <>
-        <h5 className="mb-3">{children}</h5>
+        <h5 className="mb-3 pt-3">{children}</h5>
         <hr className="pb-2" />
     </>;
 }
@@ -44,7 +44,7 @@ function TeamPage() {
     return (
         <Layout title="Team">
 
-            <p>Meet our team! Click on profile picture to open their personal websites.</p>
+            <p className="text-muted">Meet our team! Click on profile picture to open their personal websites.</p>
 
             <Section>Principal Investigator</Section>
 

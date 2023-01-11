@@ -8,7 +8,7 @@ function ContactPage() {
             <Row>
                 <Col sm="12" md="6">
 
-                    <p>We're are currently housed in the <a href="https://www.umflint.edu/cit/">College of Innovation &amp; Technology</a> at <a href="https://www.umflint.edu/"> University of Michigan-Flint</a></p>
+                    <p className="text-muted">We're are currently housed in the <a href="https://www.umflint.edu/cit/">College of Innovation &amp; Technology</a> at <a href="https://www.umflint.edu/"> University of Michigan-Flint</a></p>
 
                     <hr/>
 

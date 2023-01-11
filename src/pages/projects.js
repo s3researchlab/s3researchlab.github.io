@@ -5,7 +5,7 @@ function ProjectsPage() {
     return (
         <Layout title="Projects">
 
-            <p>Coming up soon!</p>
+            <p className="text-muted">Coming up soon!</p>
 
         </Layout>
     );

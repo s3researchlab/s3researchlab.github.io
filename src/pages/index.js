@@ -44,10 +44,10 @@ function IndexPage() {
         <Layout menu="Home">
             <div className="text-center banner">
                 <div className="mb-5">
-                    <h1 className="lg fw-bold gradient">{technologies[index]}</h1>
+                    <h1 className="lg fw-bold text-success">{technologies[index]}</h1>
                     <h1 className="lg">applied to software systems development</h1>
                 </div>
-                <p className="mb-5 text-center">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
+                <p className="mb-5 text-center text-muted">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
                 <div className="mb-5">
                     <Link href="./projects" className="btn btn-primary me-3">Explore Projects
                     </Link>
