@@ -35,14 +35,15 @@ function NavBar() {
                         </a>
                     </div>
                     <div>
-                        <Link href="/projects" className="btn btn-primary">Join Us</Link>
+                        <Link href="/projects" className="btn btn-primary d-none d-md-block">Join Us</Link>
                     </div>
                 </Container>
             </div>
-            <Navbar expand="lg" bg="light">
-                <Navbar.Toggle className="ms-3" />
+            <Navbar expand="sm" bg="light">
                 <Container >
-                    <Navbar.Collapse className="jusstify-content-end">
+                    <span></span>
+                    <Navbar.Toggle className="" />
+                    <Navbar.Collapse >
                         <Nav>
                             <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
                             <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>

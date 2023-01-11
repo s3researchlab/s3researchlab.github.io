@@ -1,6 +1,14 @@
 import { Card } from "react-bootstrap";
 import Layout from "../components/layout/Layout";
 
+function Section({ children }) {
+
+    return <>
+        <h5 className="mb-3 pt-3">{children}</h5>
+        <hr className="pb-2" />
+    </>;
+}
+
 function ProjectsPage() {
 
     return (
@@ -9,6 +17,15 @@ function ProjectsPage() {
             {/* <p className="text-muted">Coming up soon!</p> */}
 
             <p className="text-muted">We're always looking for talented, motivated people to join us. If you're interested in the things we do and you'd like to join us, or visit our lab, please reach out to the principal investigator. See below the current opportunities in our lab.</p>
+
+            <Section>Ph.D. Research Projects</Section>
+            <p>Coming soon.</p>
+
+            <Section>Master's Research Projects</Section>
+            <p>Coming soon.</p>
+
+            <Section>Undergraduate Research Projects</Section>
+            <p>if you are a undergraduate student at UM-Flint, please consider applying for the following research projects</p>
 
             <Card className="mt-4">
                 <Card.Header>

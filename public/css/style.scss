@@ -46,6 +46,7 @@ ul li {
 }
 
 h5 {
+    color: $dracula-white;
     margin-bottom: 1.0rem !important;
 }
 
@@ -76,10 +77,6 @@ h5 {
 
 .topbar {
     min-height: 100px;
-
-    img {
-        height: 60px;
-    }
 }
 
 .navbar {
