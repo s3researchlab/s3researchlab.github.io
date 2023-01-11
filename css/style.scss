@@ -1,24 +1,35 @@
-:root{
-    --link-color: #8471FB;
-    --page-bg-color: rgba(22, 20, 25);
-}
+$primary: #ffcc00;
+$dracula-purple: #9580FF;
+$dracula-cyan: #80FFEA;
+$dracula-background: #15171B;
+$dracula-current-line: #1D1E26;
+$dracula-description: #8a8f98;
+$dracula-white: #f8f8f2;
+$dracula-green: #8aff80;
+$dracula-orange: #ffca80;
+$dracula-pink: #ff80bf;
 
 html {
-    background-color: #120B1C !important;
+    background-color: $dracula-background !important;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
 
 body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    margin-top: 90px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     background-color: transparent;
-    color: #D5DCEA;
-    font-size: 14px;
+    color: $dracula-white;
     line-height: 1.5;
 }
 
-a{
-    color: var(--link-color);
+a {
+    color: $dracula-purple;
     text-decoration: none;
+
+    &:hover{
+        color: $dracula-purple;
+        opacity: 0.75 !important;
+    }
 }
 
 p {
@@ -30,45 +41,47 @@ ul li {
     margin-bottom: .5rem !important;
 }
 
-h5{
+h5 {
     margin-bottom: 1.0rem !important;
 }
 
-.banner{
+.banner {
 
     padding-top: 1rem !important;
 
     @media (min-width: 575.98px) {
-       padding-top: 7rem !important;
+        padding-top: 7rem !important;
     }
 
-    .btn{
+    .btn {
         @media (min-width: 575.98px) {
             min-width: 150px;
-         }
+        }
     }
 }
 
 .lg {
 
-    font-size: 2.75rem!important;
+    font-size: 2.75rem !important;
 
     @media (min-width: 575.98px) {
         font-size: 3.75rem !important;
     }
 }
 
-.gradient{
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(90deg, #C02CF1, #69A2F3);
+
+.topbar {
+    min-height: 100px;
+
+    img {
+        height: 60px;
+    }
 }
 
 .navbar {
 
-    background-color: #120B1C !important;
-    border-bottom: 0.3px solid #413E4D;
+    background-color: $dracula-current-line !important;
+    flex-direction: column !important;
 
     .navbar-brand {
 
@@ -87,11 +100,16 @@ h5{
 
     .nav-link {
 
-        color: gray !important;
+        color: white !important;
+        border-bottom: 1px solid $dracula-current-line;
 
-        &.active {
-            color: #D5DCEA !important;
+        i.bi{
+            margin-right: 0.5rem !important;
+            color: $dracula-cyan !important
+        }
 
+        &:hover, &.active{
+            border-bottom: 1px solid $dracula-white;
         }
     }
 
@@ -105,35 +123,49 @@ h5{
     }
 }
 
+.text-muted{
+    color: $dracula-description !important;
+}
 .text-primary {
-    color: var(--link-color) !important;
+    color: $dracula-purple !important;
 }
 
-.btn-primary{
-    color: white;
-    background-color: #8471FB;
-    border-color: #8471FB;
+.text-success{
+    color: $dracula-green !important;
+}
 
-    &:hover{
-        background-color: darken(#8471FB, 8%) !important;
-        border-color: #8471FB !important;
+.text-info{
+    color: $dracula-cyan !important;
+}
+
+.btn-primary {
+    color: $dracula-background  !important;
+    background-color: $dracula-purple;
+    border-color: transparent !important;
+
+    &:hover, &:active, &:focus {
+        color: black;
+        background-color: $dracula-purple !important;
+        opacity: 0.75 !important;
+        border-color: transparent !important;
     }
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
 
-    color: #8471FB;
-    border-color: #8471FB;
+    color: $dracula-purple  !important;
+    border-color: $dracula-purple !important;
 
-    &:hover{
-        background-color: #8471FB !important;
-        border-color: #8471FB !important;
+    &:hover, &:active, &:focus {
+        color: $dracula-background  !important;
+        background-color: $dracula-purple !important;
+        border-color: $dracula-purple !important;
     }
 }
 
 .collapse-group {
 
-    [data-bs-toggle="collapse"]{
+    [data-bs-toggle="collapse"] {
 
         margin-left: 20px;
         cursor: pointer;
