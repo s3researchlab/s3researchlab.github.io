@@ -3,7 +3,8 @@ $foreground: #c9d1d9;
 $dracula-purple: #9580FF;
 $dracula-cyan: #80FFEA;
 $dracula-background: #15171B;
-$dracula-current-line: #1D1E26;
+// $dracula-current-line: #1D1E26;
+$dracula-current-line: #282a36;
 $dracula-muted: #8a8f98;
 $dracula-disabled: #6c7393;
 $dracula-white: #f8f8f2;
@@ -46,6 +47,7 @@ ul li {
 }
 
 h5 {
+    color: $dracula-white;
     margin-bottom: 1.0rem !important;
 }
 
@@ -76,10 +78,6 @@ h5 {
 
 .topbar {
     min-height: 100px;
-
-    img {
-        height: 60px;
-    }
 }
 
 .navbar {
@@ -253,5 +251,15 @@ h5 {
         ul {
             margin-left: 0px;
         }
+    }
+}
+
+input, select{
+    color: $dracula-muted !important;
+    background-color: $dracula-current-line !important;
+    border-color: $dracula-current-line !important;
+
+    &:focus{
+        border-color: $dracula-muted !important;
     }
 }
