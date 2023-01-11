@@ -44,7 +44,7 @@ function TeamPage() {
     return (
         <Layout title="Team">
 
-            <p className="text-muted">Meet our team! Click on profile picture to open their personal websites.</p>
+            <p>Meet our team! Click on profile picture to open their personal websites.</p>
 
             <Section>Principal Investigator</Section>
 

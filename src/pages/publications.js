@@ -114,21 +114,21 @@ function PublicationsPage({ entries }) {
     return (
         <Layout title="Publications">
 
-            <div className="row">
+            <div className="row d-flex align-items-center">
                 <div className="col-12 col-md">
-                    <p className="text-muted">This is not the full list. We will update it as soon as possible.</p>
+                    <p>This is not the full list. We will update it as soon as possible.</p>
                 </div>
                 <div className="col-12 col-md-auto">
                     <div autoComplete="off" className="mb-3" action="#">
                         <div className="d-flex justify-content-start">
                             <div className="me-2">
-                                <select className="form-select form-select-sm" value={publicationType} onChange={handlePublicationType}>
+                                <select className="form-select" value={publicationType} onChange={handlePublicationType}>
                                     <option value="year">Year</option>
                                     <option value="annote">Type</option>
                                 </select>
                             </div>
                             <div>
-                                <input type="search" className="form-control form-control-sm" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
+                                <input type="search" className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
                             </div>
                         </div>
                     </div>
