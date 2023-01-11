@@ -1,4 +1,5 @@
 $primary: #ffcc00;
+$foreground: #c9d1d9;
 $dracula-purple: #9580FF;
 $dracula-cyan: #80FFEA;
 $dracula-background: #15171B;
@@ -21,6 +22,8 @@ body {
     background-color: transparent;
     color: $dracula-white;
     line-height: 1.5;
+    font-weight: 300;
+    color: $foreground !important;
 }
 
 a {
@@ -86,7 +89,7 @@ h5 {
 
     .navbar-brand {
 
-        color: #D5DCEA !important;
+        color: $foreground !important;
 
         img {
             @media (min-width: 575.98px) {
@@ -101,7 +104,7 @@ h5 {
 
     .nav-link {
 
-        color: white !important;
+        color: $foreground !important;
         border-bottom: 1px solid $dracula-current-line;
 
         i.bi {
@@ -131,17 +134,16 @@ h5 {
     border: 1px solid $dracula-disabled !important;
 
     .card-header {
-        color: $dracula-background;
-        background-color: $dracula-green;
+        font-weight: bold;
+        color: $foreground;
+        background-color: $dracula-current-line;
     }
 
     .list-group {
-        // border: 1px solid red;
-
-
 
         .list-group-item {
-            color: $dracula-white !important;
+
+            color: $foreground !important;
             border-top: 1px solid $dracula-disabled !important;
             background-color: transparent !important;
         }
