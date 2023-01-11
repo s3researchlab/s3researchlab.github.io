@@ -3,7 +3,8 @@ $dracula-purple: #9580FF;
 $dracula-cyan: #80FFEA;
 $dracula-background: #15171B;
 $dracula-current-line: #1D1E26;
-$dracula-description: #8a8f98;
+$dracula-muted: #8a8f98;
+$dracula-disabled: #6c7393;
 $dracula-white: #f8f8f2;
 $dracula-green: #8aff80;
 $dracula-orange: #ffca80;
@@ -26,7 +27,7 @@ a {
     color: $dracula-purple;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
         color: $dracula-purple;
         opacity: 0.75 !important;
     }
@@ -103,12 +104,13 @@ h5 {
         color: white !important;
         border-bottom: 1px solid $dracula-current-line;
 
-        i.bi{
+        i.bi {
             margin-right: 0.5rem !important;
             color: $dracula-cyan !important
         }
 
-        &:hover, &.active{
+        &:hover,
+        &.active {
             border-bottom: 1px solid $dracula-white;
         }
     }
@@ -123,27 +125,53 @@ h5 {
     }
 }
 
-.text-muted{
-    color: $dracula-description !important;
+.card {
+
+    background-color: transparent !important;
+    border: 1px solid $dracula-disabled !important;
+
+    .card-header {
+        color: $dracula-background;
+        background-color: $dracula-green;
+    }
+
+    .list-group {
+        // border: 1px solid red;
+
+
+
+        .list-group-item {
+            color: $dracula-white !important;
+            border-top: 1px solid $dracula-disabled !important;
+            background-color: transparent !important;
+        }
+    }
 }
+
+.text-muted {
+    color: $dracula-muted !important;
+}
+
 .text-primary {
     color: $dracula-purple !important;
 }
 
-.text-success{
+.text-success {
     color: $dracula-green !important;
 }
 
-.text-info{
+.text-info {
     color: $dracula-cyan !important;
 }
 
 .btn-primary {
-    color: $dracula-background  !important;
+    color: $dracula-background !important;
     background-color: $dracula-purple;
     border-color: transparent !important;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         color: black;
         background-color: $dracula-purple !important;
         opacity: 0.75 !important;
@@ -151,15 +179,46 @@ h5 {
     }
 }
 
+.btn-success {
+    color: $dracula-background !important;
+    background-color: $dracula-green;
+    border-color: transparent !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: black;
+        background-color: $dracula-green !important;
+        opacity: 0.75 !important;
+        border-color: transparent !important;
+    }
+}
+
 .btn-outline-primary {
 
-    color: $dracula-purple  !important;
+    color: $dracula-purple !important;
     border-color: $dracula-purple !important;
 
-    &:hover, &:active, &:focus {
-        color: $dracula-background  !important;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $dracula-background !important;
         background-color: $dracula-purple !important;
         border-color: $dracula-purple !important;
+    }
+}
+
+.btn-outline-success {
+
+    color: $dracula-green !important;
+    border-color: $dracula-green !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $dracula-background !important;
+        background-color: $dracula-green !important;
+        border-color: $dracula-green !important;
     }
 }
 
