@@ -1,5 +1,11 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+
 $primary: #ffcc00;
 $foreground: #c9d1d9;
+
 $dracula-purple: #9580FF;
 $dracula-cyan: #80FFEA;
 $dracula-background: #15171B;
@@ -12,6 +18,12 @@ $dracula-green: #8aff80;
 $dracula-orange: #ffca80;
 $dracula-pink: #ff80bf;
 
+/*********************************
+ * Sizes                         *
+ *********************************/
+
+$m-3: map-get($spacers, 3);
+
 html {
     background-color: $dracula-background !important;
     overflow: -moz-scrollbars-vertical;
@@ -21,7 +33,6 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     background-color: transparent;
-    color: $dracula-white;
     line-height: 1.5;
     font-weight: 300;
     color: $foreground !important;
@@ -39,16 +50,42 @@ a {
 
 p {
     text-align: justify !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: $m-3 !important;
 }
 
 ul li {
-    margin-bottom: .5rem !important;
+    margin-bottom: $m-3 !important;
 }
 
-h5 {
-    color: $dracula-white;
-    margin-bottom: 1.0rem !important;
+header {
+    margin-bottom: map-get($spacers, 3);
+}
+
+/*********************************
+ * Headings                      *
+ *********************************/
+
+h1 {
+    color: red !important;
+    font-size: 2.75rem !important;
+}
+
+h2 {
+    font-size: 2.25rem !important;
+}
+
+h3 {
+    font-size: 1.75rem !important;
+    margin-bottom: $m-3;
+    color: $dracula-cyan;
+}
+
+h4 {
+    font-size: 1.25rem !important;
+    padding-top: $m-3;
+    padding-bottom: $m-3;
+    margin-bottom: $m-3;
+    border-bottom: 1px solid $dracula-disabled;
 }
 
 .banner {
@@ -65,16 +102,6 @@ h5 {
         }
     }
 }
-
-.lg {
-
-    font-size: 2.75rem !important;
-
-    @media (min-width: 575.98px) {
-        font-size: 3.75rem !important;
-    }
-}
-
 
 .topbar {
     min-height: 100px;
@@ -164,7 +191,12 @@ h5 {
     color: $dracula-cyan !important;
 }
 
+/*********************************
+ * Butons                        *
+ *********************************/
+
 .btn-primary {
+
     color: $dracula-background !important;
     background-color: $dracula-purple;
     border-color: transparent !important;
@@ -172,14 +204,13 @@ h5 {
     &:hover,
     &:active,
     &:focus {
-        color: black;
         background-color: $dracula-purple !important;
         opacity: 0.75 !important;
-        border-color: transparent !important;
     }
 }
 
 .btn-success {
+
     color: $dracula-background !important;
     background-color: $dracula-green;
     border-color: transparent !important;
@@ -187,38 +218,8 @@ h5 {
     &:hover,
     &:active,
     &:focus {
-        color: black;
         background-color: $dracula-green !important;
         opacity: 0.75 !important;
-        border-color: transparent !important;
-    }
-}
-
-.btn-outline-primary {
-
-    color: $dracula-purple !important;
-    border-color: $dracula-purple !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $dracula-background !important;
-        background-color: $dracula-purple !important;
-        border-color: $dracula-purple !important;
-    }
-}
-
-.btn-outline-success {
-
-    color: $dracula-green !important;
-    border-color: $dracula-green !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $dracula-background !important;
-        background-color: $dracula-green !important;
-        border-color: $dracula-green !important;
     }
 }
 
@@ -238,6 +239,11 @@ h5 {
         }
     }
 
+    strong {
+        color: $dracula-cyan;
+        font-weight: bold;
+    }
+
     .collapsed i::before {
         transform: rotate(0deg);
         transition-duration: 0.3s;
@@ -254,25 +260,27 @@ h5 {
     }
 }
 
-hr{
+hr {
     border-color: white !important;
 }
 
-input, select{
+input,
+select {
+
     color: $dracula-muted !important;
     background-color: $dracula-current-line !important;
     border-color: $dracula-current-line !important;
 
-    &:focus{
+    &:focus {
         border-color: $dracula-muted !important;
     }
 
-    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    &::placeholder {
         color: $dracula-muted !important;
     }
 }
 
-select{
+select {
     appearance: none !important;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%238a8f98' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
 }
