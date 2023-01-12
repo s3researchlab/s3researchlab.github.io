@@ -5,6 +5,7 @@
 
 $primary: #ffcc00;
 $foreground: #c9d1d9;
+
 $dracula-purple: #9580FF;
 $dracula-cyan: #80FFEA;
 $dracula-background: #15171B;
@@ -49,11 +50,11 @@ a {
 
 p {
     text-align: justify !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: $m-3 !important;
 }
 
 ul li {
-    margin-bottom: .5rem !important;
+    margin-bottom: $m-3 !important;
 }
 
 header {
@@ -84,7 +85,7 @@ h4 {
     padding-top: $m-3;
     padding-bottom: $m-3;
     margin-bottom: $m-3;
-    border-bottom: 1px solid $dracula-muted;
+    border-bottom: 1px solid $dracula-disabled;
 }
 
 .banner {
@@ -190,7 +191,12 @@ h4 {
     color: $dracula-cyan !important;
 }
 
+/*********************************
+ * Butons                        *
+ *********************************/
+
 .btn-primary {
+
     color: $dracula-background !important;
     background-color: $dracula-purple;
     border-color: transparent !important;
@@ -198,14 +204,13 @@ h4 {
     &:hover,
     &:active,
     &:focus {
-        color: black;
         background-color: $dracula-purple !important;
         opacity: 0.75 !important;
-        border-color: transparent !important;
     }
 }
 
 .btn-success {
+
     color: $dracula-background !important;
     background-color: $dracula-green;
     border-color: transparent !important;
@@ -213,38 +218,8 @@ h4 {
     &:hover,
     &:active,
     &:focus {
-        color: black;
         background-color: $dracula-green !important;
         opacity: 0.75 !important;
-        border-color: transparent !important;
-    }
-}
-
-.btn-outline-primary {
-
-    color: $dracula-purple !important;
-    border-color: $dracula-purple !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $dracula-background !important;
-        background-color: $dracula-purple !important;
-        border-color: $dracula-purple !important;
-    }
-}
-
-.btn-outline-success {
-
-    color: $dracula-green !important;
-    border-color: $dracula-green !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $dracula-background !important;
-        background-color: $dracula-green !important;
-        border-color: $dracula-green !important;
     }
 }
 
@@ -266,6 +241,7 @@ h4 {
 
     strong {
         color: $dracula-cyan;
+        font-weight: bold;
     }
 
     .collapsed i::before {
@@ -300,7 +276,6 @@ select {
     }
 
     &::placeholder {
-        /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: $dracula-muted !important;
     }
 }

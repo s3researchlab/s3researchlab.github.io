@@ -17,7 +17,7 @@ function Component({ title }) {
             <meta name="description" content={Package.description} />
             <meta name="keywords" content={Package.keywords} />
             <meta name="robots" content="index, follow" />
-            <meta name="theme-color" content="#120B1C" />
+            <meta name="theme-color" content="#15171B" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black" />

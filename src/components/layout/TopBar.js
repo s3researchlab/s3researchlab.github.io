@@ -6,7 +6,7 @@ function TopBar() {
 
     return (
         <div className="topbar d-flex align-items-center">
-            <Container className=" d-flex justify-content-between align-items-center">
+            <Container className="d-flex justify-content-between align-items-center">
                     <Link href="/">
                     <img className="img-fluid" src="images/logo-long-name.png"/>
                 </Link>
