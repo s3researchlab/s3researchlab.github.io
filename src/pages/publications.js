@@ -117,7 +117,7 @@ function PublicationsPage({ entries }) {
 
             <p>This is not the full list. We will update it as soon as possible.</p>
 
-            <form class="row g-1 mb-3">
+            <form className="row g-1 mb-3">
                 <Col xs="12" sm="3" md="2" lg="2" xl="1">
                     <select className="form-select" value={publicationType} onChange={handlePublicationType}>
                         <option value="year">Year</option>
@@ -125,7 +125,7 @@ function PublicationsPage({ entries }) {
                     </select>
                 </Col>
                 <Col xs="12" sm="9" md="10" lg="10" xl="11">
-                    <input type="search" className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
+                    <input type="search" autoFocus className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
                 </Col>
             </form>
 

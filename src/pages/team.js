@@ -1,14 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import Layout from "../components/layout/Layout";
 
-function Section({ children }) {
-
-    return <>
-        <h5 className="mb-3 pt-3">{children}</h5>
-        <hr className="pb-2" />
-    </>;
-}
-
 function Member({ name, description, img, url }) {
 
     return <a href={url} target="_blank">
@@ -20,7 +12,7 @@ function Member({ name, description, img, url }) {
 
 function Group({ children }) {
 
-    if(!children){
+    if (!children) {
         children = <p>To be Announced</p>;
     }
 
@@ -28,7 +20,7 @@ function Group({ children }) {
         children = [children];
     }
 
-    const columns = children.map( (child, i)=>
+    const columns = children.map((child, i) =>
         <Col xs={6} sm={4} md={2} key={i} >
             {child}
         </Col>
@@ -46,22 +38,22 @@ function TeamPage() {
 
             <p>Meet our team! Click on profile picture to open their personal websites.</p>
 
-            <Section>Principal Investigator</Section>
+            <h4>Principal Investigator</h4>
 
             <Member name="Thiago Ferreira" description="University of Michigan-Flint" img="thiago-ferreira.jpg" url="http://umich.edu/~thiagod" />
 
-            <Section>Affiliated Faculty Members</Section>
+            <h4>Affiliated Faculty Members</h4>
 
             <Group>
-            <Member name="Jeffrey Yackley" description="University of Michigan-Flint" img="jeff.jpg" url="http://umich.edu/~jyackley" />
+                <Member name="Jeffrey Yackley" description="University of Michigan-Flint" img="jeff.jpg" url="http://umich.edu/~jyackley" />
 
             </Group>
 
-            <Section>Current Undergraduate Students</Section>
+            <h4>Current Undergraduate Students</h4>
 
             <Group></Group>
 
-            <Section>Alumni</Section>
+            <h4>Alumni</h4>
 
             <Group>
                 <Member name="Tyler Gibbard" description="2022 Undergraduate Research Opportunity Program (UROP)" img="tyler-gibbard.png" />

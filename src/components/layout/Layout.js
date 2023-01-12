@@ -14,9 +14,9 @@ function Layout({ children, title, menu }) {
             <header>
                 <NavBar />
             </header>
-            <main className="mt-4">
+            <main>
                 <Container>
-                    <h3 className="mb-4 text-info">{title}</h3>
+                    <h3>{title}</h3>
                     {children}
                 </Container>
             </main>

@@ -22,8 +22,6 @@ function Footer() {
 
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-HNGSCV50W9"></Script>
             <Script>{injectGA()}</Script>
-
-            <Script src="js/script.js"/>
         </footer>
     );
 }

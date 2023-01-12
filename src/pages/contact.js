@@ -22,7 +22,7 @@ function ContactPage() {
 
                 </Col>
                 <Col sm="12" md="6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8511.913487020587!2d-83.69364197666431!3d43.02046106744844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88238217c25d9827%3A0xf5cdab96dcc98e0c!2sUniversity%20of%20Michigan-Flint!5e0!3m2!1sen!2sus!4v1662905510786!5m2!1sen!2sus" width="100%" height="450" style={{"border": "0"}} allowFullScreen="allowfullscreen"  referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8511.913487020587!2d-83.69364197666431!3d43.02046106744844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88238217c25d9827%3A0xf5cdab96dcc98e0c!2sUniversity%20of%20Michigan-Flint!5e0!3m2!1sen!2sus!4v1662905510786!5m2!1sen!2sus" width="100%" height="250" style={{"border": "0"}} allowFullScreen="allowfullscreen"  referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </Col>
             </Row>
         </Layout>
