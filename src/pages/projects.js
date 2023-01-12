@@ -34,19 +34,19 @@ function ProjectsPage() {
                         <div className="me-auto">
                             Selecting the best set of software requirements for the next software release by using optimization algorithms
                         </div>
-                        <a className="btn btn-sm btn-success" href="https://umflint.infoready4.com/#competitionDetail/1891954">Apply</a>
+                        <a className="btn btn-sm btn-success ms-3" href="https://umflint.infoready4.com/#competitionDetail/1891954">Apply</a>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center mb-0">
                         <div className="me-auto">
                             Mining and Data Analysis on GitHub Repositories
                         </div>
-                        <a className="btn btn-sm btn-success" href="https://umflint.infoready4.com/#competitionDetail/1891855">Apply</a>
+                        <a className="btn btn-sm btn-success ms-3" href="https://umflint.infoready4.com/#competitionDetail/1891855">Apply</a>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center mb-0">
                         <div className="me-auto">
                             Selecting the best set of software requirements for the next software release by using optimization algorithms
                         </div>
-                        <a className="btn btn-sm btn-success" href="https://umflint.infoready4.com/#competitionDetail/1891856">Apply</a>
+                        <a className="btn btn-sm btn-success ms-3" href="https://umflint.infoready4.com/#competitionDetail/1891856">Apply</a>
                     </li>
                 </ul>
             </Card>

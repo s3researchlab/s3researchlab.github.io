@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../components/layout/Layout";
 import CollapseGroup from "../components/CollapseGroup";
 import BibTexUtils from "../utils/bibtex-util";
+import { Row, Col } from "react-bootstrap";
 
 const groups = {
     "journal": { order: 1, title: "Refereed Journal Papers" },
@@ -114,26 +115,19 @@ function PublicationsPage({ entries }) {
     return (
         <Layout title="Publications">
 
-            <div className="row d-flex align-items-center">
-                <div className="col-12 col-md">
-                    <p>This is not the full list. We will update it as soon as possible.</p>
-                </div>
-                <div className="col-12 col-md-auto">
-                    <div autoComplete="off" className="mb-3">
-                        <div className="d-flex justify-content-start">
-                            <div className="me-2">
-                                <select className="form-select" value={publicationType} onChange={handlePublicationType}>
-                                    <option value="year">Year</option>
-                                    <option value="annote">Type</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input type="search" className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>This is not the full list. We will update it as soon as possible.</p>
+
+            <form class="row g-1 mb-3">
+                <Col xs="12" sm="3" md="2" lg="2" xl="1">
+                    <select className="form-select" value={publicationType} onChange={handlePublicationType}>
+                        <option value="year">Year</option>
+                        <option value="annote">Type</option>
+                    </select>
+                </Col>
+                <Col xs="12" sm="9" md="10" lg="10" xl="11">
+                    <input type="search" className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
+                </Col>
+            </form>
 
             {groupsAsHtml}
 
