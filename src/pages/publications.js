@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../components/layout/Layout";
 import CollapseGroup from "../components/CollapseGroup";
 import BibTexUtils from "../utils/bibtex-util";
-import { Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 const groups = {
     "journal": { order: 1, title: "Refereed Journal Papers" },
