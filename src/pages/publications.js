@@ -119,7 +119,7 @@ function PublicationsPage({ entries }) {
                     <p>This is not the full list. We will update it as soon as possible.</p>
                 </div>
                 <div className="col-12 col-md-auto">
-                    <div autoComplete="off" className="mb-3" action="#">
+                    <div autoComplete="off" className="mb-3">
                         <div className="d-flex justify-content-start">
                             <div className="me-2">
                                 <select className="form-select" value={publicationType} onChange={handlePublicationType}>
