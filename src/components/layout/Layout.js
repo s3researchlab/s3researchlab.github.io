@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Head from "./Head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import TopBar from "./TopBar";
 
 function Layout({ children, title, menu }) {
 
@@ -12,6 +13,7 @@ function Layout({ children, title, menu }) {
         <>
             <Head title={menu} />
             <header>
+                <TopBar />
                 <NavBar />
             </header>
             <main>

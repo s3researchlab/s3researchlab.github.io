@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { Navbar, Container, Nav, Row } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 function NavLink({ href, exact, children }) {
 
@@ -26,36 +26,21 @@ function NavLink({ href, exact, children }) {
 function NavBar() {
 
     return (
-        <>
-            <div className="topbar d-flex align-items-center">
-                <Container className=" d-flex justify-content-between align-items-center">
-                    <div>
-                        <a href="#" >
-                            <img className="img-fluid" src="images/logo-long-name.png"/>
-                        </a>
-                    </div>
-                    <div>
-                        <Link href="/projects" className="btn btn-primary d-none d-md-block">Join Us</Link>
-                    </div>
-                </Container>
-            </div>
-            <Navbar expand="sm" bg="light">
-                <Container >
-                    <span></span>
-                    <Navbar.Toggle className="" />
-                    <Navbar.Collapse >
-                        <Nav>
-                            <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
-                            <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
-                            <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
-                            <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
-                            <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </>
-
+        <Navbar expand="sm" bg="light">
+            <Container >
+                <span></span>
+                <Navbar.Toggle className="" />
+                <Navbar.Collapse >
+                    <Nav>
+                        <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
+                        <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
+                        <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
+                        <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
+                        <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 
