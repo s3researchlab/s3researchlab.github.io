@@ -1,10 +1,11 @@
 {
     "name": "s3researchlab.github.io",
     "description": "Smart Software Systems Research Lab",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "author": "S3 Research Lab",
     "license": "MIT",
     "homepage": "s3researchlab.github.io",
+    "keywords": ["s3", "research lab"],
     "repository": {
         "type": "git",
         "url": "https://github.com/s3researchlab/s3researchlab.github.io"

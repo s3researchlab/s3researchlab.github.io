@@ -17,10 +17,7 @@ function NavLink({ href, exact, children }) {
         isActive = "active";
     }
 
-    return <>
-        <Link href={href} className={`nav-link ${isActive}`}>{children}
-        </Link>
-    </>;
+    return <Link href={href} className={`nav-link ${isActive}`}>{children}</Link>;
 }
 
 function NavBar() {
