@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 function ContactPage() {
 
     return (
-        <Layout title="Contact">
+        <Layout menu="Contact">
             <Row>
                 <Col sm="12" md="6">
 

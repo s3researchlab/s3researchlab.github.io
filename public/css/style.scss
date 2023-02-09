@@ -85,6 +85,7 @@ h4 {
     padding-top: $m-3;
     padding-bottom: $m-3;
     margin-bottom: $m-3;
+    color: $dracula-white;
     border-bottom: 1px solid $dracula-disabled;
 }
 
@@ -129,7 +130,7 @@ h4 {
 
     .nav-link {
 
-        color: $foreground !important;
+        color: $dracula-white !important;
         border-bottom: 1px solid $dracula-current-line;
 
         i.bi {
@@ -160,7 +161,7 @@ h4 {
 
     .card-header {
         font-weight: bold;
-        color: $foreground;
+        color: $dracula-white;
         background-color: $dracula-current-line;
     }
 

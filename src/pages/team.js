@@ -34,7 +34,7 @@ function Group({ children }) {
 function TeamPage() {
 
     return (
-        <Layout title="Team">
+        <Layout menu="Team">
 
             <p>Meet our team! Click on profile picture to open their personal websites.</p>
 

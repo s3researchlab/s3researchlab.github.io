@@ -6,12 +6,10 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import TopBar from "./TopBar";
 
-function Layout({ children, title, menu }) {
+function Layout({ children, menu }) {
 
-    menu = menu || title;
-
-    title = title == "Home" ? "" : title;
-    title = title ? `${title} - ` : "";
+    let page = menu == "Home" ? "" : menu;
+    let title = menu == "Home" ? "" : `${menu} - `;
 
     return (
         <>
@@ -25,7 +23,7 @@ function Layout({ children, title, menu }) {
             </header>
             <main>
                 <Container>
-                    <h3>{menu}</h3>
+                    <h3>{page}</h3>
                     {children}
                 </Container>
             </main>
