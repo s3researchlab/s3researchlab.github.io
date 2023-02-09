@@ -20,7 +20,7 @@ function Footer() {
         <>
             <Script src="https://code.jquery.com/jquery-3.6.0.min.js" crossOrigin="anonymous"></Script>
 
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-HNGSCV50W9"></Script>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S1P93RNMN0"></Script>
             <Script>{injectGA()}</Script>
         </>
     );
