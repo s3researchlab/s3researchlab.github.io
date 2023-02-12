@@ -4,19 +4,25 @@
 @import "bootstrap/scss/utilities";
 
 $primary: #ffcc00;
-$foreground: #c9d1d9;
+$foreground: #8a8f98;
 
-$dracula-purple: #9580FF;
-$dracula-cyan: #80FFEA;
+
 $dracula-background: #15171B;
 // $dracula-current-line: #1D1E26;
 $dracula-current-line: #282a36;
-$dracula-muted: #8a8f98;
+// $dracula-muted: #8a8f98;
 $dracula-disabled: #6c7393;
-$dracula-white: #f8f8f2;
+
+$dracula-cyan: #80FFEA;
 $dracula-green: #8aff80;
 $dracula-orange: #ffca80;
 $dracula-pink: #ff80bf;
+$dracula-purple: #9580FF;
+$dracula-red: #ff9580;
+$dracula-yellow: #ffff80;
+$dracula-white: #f8f8f2;
+
+$dracula-muted: #414558;
 
 /*********************************
  * Sizes                         *
@@ -34,7 +40,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     background-color: transparent;
     line-height: 1.5;
-    font-weight: 300;
     color: $foreground !important;
 }
 
@@ -58,7 +63,7 @@ ul li {
 }
 
 header {
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: $m-3;
 }
 
 /*********************************
@@ -66,7 +71,6 @@ header {
  *********************************/
 
 h1 {
-    color: red !important;
     font-size: 2.75rem !important;
 }
 
