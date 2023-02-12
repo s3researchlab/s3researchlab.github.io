@@ -47,7 +47,7 @@ function IndexPage() {
                     <h1 className="fw-bold text-success">{technologies[index]}</h1>
                     <h2>applied to software systems development</h2>
                 </div>
-                <p className="mb-5 text-center text-muted">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
+                <p className="mb-5 text-center">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
                 <div className="mb-5">
                     <Link href="./projects" className="btn btn-primary">Explore Projects</Link>
                 </div>
