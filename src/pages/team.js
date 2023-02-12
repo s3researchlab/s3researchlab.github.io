@@ -6,7 +6,7 @@ function Member({ name, description, img, url }) {
     return <a href={url} target="_blank">
         <img className="rounded mb-2 img-fluid" src={`images/profile-photo/${img}`} width={180} />
         <p className="text-light mb-0">{name}</p>
-        <p className="small mb-3 text-muted">{description}</p>
+        <p className="small mb-3 text-start">{description}</p>
     </a>;
 }
 
@@ -46,7 +46,6 @@ function TeamPage() {
 
             <Group>
                 <Member name="Jeffrey Yackley" description="University of Michigan-Flint" img="jeff.jpg" url="http://umich.edu/~jyackley" />
-
             </Group>
 
             <h4>Current Undergraduate Students</h4>
