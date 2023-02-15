@@ -272,7 +272,7 @@ hr {
 input,
 select {
 
-    color: $dracula-muted !important;
+    color: $foreground !important;
     background-color: $dracula-current-line !important;
     border-color: $dracula-current-line !important;
 
@@ -281,8 +281,12 @@ select {
     }
 
     &::placeholder {
-        color: $dracula-muted !important;
+        color: $foreground !important;
     }
+}
+
+input{
+    color: $dracula-white !important;
 }
 
 select {
