@@ -125,7 +125,7 @@ function PublicationsPage({ entries }) {
                     </select>
                 </Col>
                 <Col xs="12" sm="9" md="10" lg="10" xl="11">
-                    <input type="search" autoFocus className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
+                    <input type="search" className="form-control" placeholder="Search papers" autoComplete="off" value={searchTerm} onChange={handleSearchTerm} />
                 </Col>
             </form>
 
