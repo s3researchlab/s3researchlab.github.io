@@ -7,8 +7,8 @@ function TopBar() {
     return (
         <nav className="topbar d-flex align-items-center">
             <Container className="d-flex justify-content-between align-items-center">
-                    <Link href="/">
-                    <img className="img-fluid" src="images/logo-long-name.png"/>
+                <Link href="/">
+                    <img className="img-fluid" src="images/logo-long-name.png" />
                 </Link>
                 <Button variant="primary" href="/projects" className="d-none d-md-block">
                     Join Us
