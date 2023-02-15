@@ -15,15 +15,24 @@ function ResearchInitiative({ title, children }) {
     );
 }
 
-function ResearchProject({ title, url }) {
+function ResearchProject({ status, title, url }) {
+
+    const variants = {
+        "Apply" : "success",
+        "Soon" : "secondary",
+        "Closed" : "danger"
+    };
+
+    const variant = variants[status];
+    const disabled = status !== "Apply"? "disabled" : "";
 
     return (
         <ListGroup.Item className="d-flex justify-content-between align-items-center">
             <span>
                 {title}
             </span>
-            <Button variant={url ? "success" : "secondary"} disabled={url ? false : true} href={url}>
-                {url ? "Apply" : "Soon"}
+            <Button variant={variant} className={disabled} href={url}>
+                {status}
             </Button>
         </ListGroup.Item>
     );
@@ -49,6 +58,7 @@ function ProjectsPage() {
                 <ResearchProject
                     title="Towards Meaningful and Real Refactoring Operations"
                     url=""
+                    status="Soon"
                 />
             </ResearchInitiative>
 
@@ -56,14 +66,17 @@ function ProjectsPage() {
                 <ResearchProject
                     title="Arduino-powered Autonomous 'Follow Me' Car With Obstacle Avoidance"
                     url="https://umflint.infoready4.com/#competitionDetail/1891954"
+                    status="Closed"
                 />
                 <ResearchProject
                     title="Mining and Data Analysis on GitHub Repositories"
                     url="https://umflint.infoready4.com/#competitionDetail/1891855"
+                    status="Closed"
                 />
                 <ResearchProject
                     title="Selecting the best set of software requirements for the next software release by using optimization algorithms"
                     url="https://umflint.infoready4.com/#competitionDetail/1891856"
+                    status="Closed"
                 />
             </ResearchInitiative>
         </Layout>
