@@ -228,6 +228,20 @@ h4 {
     }
 }
 
+.btn-danger {
+
+    color: $dracula-background !important;
+    background-color: $dracula-red !important;
+    border-color: transparent !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $dracula-red !important;
+        opacity: 0.75 !important;
+    }
+}
+
 .collapse-group {
 
     [data-bs-toggle="collapse"] {
