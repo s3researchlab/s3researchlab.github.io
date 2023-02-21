@@ -56,7 +56,7 @@ function generateResearchInitiative(initiative) {
     return <div key={key}>
         <h4>{initiative.name}</h4>
         <p>{initiative.description}</p>
-        <Card className="mt-4" >
+        <Card className="my-4" >
             <Card.Header>
                 Projects
             </Card.Header>
