@@ -26,7 +26,6 @@ $pink: $dracula-pink;
 
 @import "bootstrap";
 
-$primary: #ffcc00;
 $foreground: #8a8f98;
 
 
@@ -57,11 +56,11 @@ body {
 }
 
 a {
-    color: $dracula-purple;
+    color: $primary;
     text-decoration: none;
 
     &:hover {
-        color: $dracula-purple;
+        color: $primary;
         opacity: 0.75 !important;
     }
 }
@@ -197,64 +196,6 @@ h4 {
 
 .text-muted {
     color: $dracula-muted !important;
-}
-
-.text-primary {
-    color: $dracula-purple !important;
-}
-
-.text-success {
-    color: $dracula-green !important;
-}
-
-.text-info {
-    color: $dracula-cyan !important;
-}
-
-/*********************************
- * Butons                        *
- *********************************/
-
-.btn-primary {
-
-    color: $dracula-background !important;
-    background-color: $dracula-purple;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-purple !important;
-        opacity: 0.75 !important;
-    }
-}
-
-.btn-success {
-
-    color: $dracula-background !important;
-    background-color: $dracula-green;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-green !important;
-        opacity: 0.75 !important;
-    }
-}
-
-.btn-danger {
-
-    color: $dracula-background !important;
-    background-color: $dracula-red !important;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-red !important;
-        opacity: 0.75 !important;
-    }
 }
 
 .collapse-group {

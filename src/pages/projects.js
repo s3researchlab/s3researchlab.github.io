@@ -16,8 +16,8 @@ function generateResearchProject(project) {
     };
 
     const buttonColors = {
-        "Soon": "outline-warning",
-        "Open": "outline-green",
+        "Soon": "warning",
+        "Open": "green",
         "Closed": "outline-secondary",
     };
 
