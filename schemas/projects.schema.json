@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://https://s3researchlab.github.io/schemas/projects.schema.json",
+    "title": "Projects",
+    "type": "object",
+    "required": [
+        "name",
+        "projects"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the initiative"
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the initiative",
+            "optional": true
+        },
+        "projects": {
+            "type": "array",
+            "description": "The projects in this initiative",
+            "items": {
+                "type": "object",
+                "required": [
+                    "title",
+                    "status"
+                ],
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "The title of the project"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the project",
+                        "optional": true
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "The URL where the students can get more information",
+                        "format": "uri",
+                        "pattern": "^(https?|wss?|ftp)://",
+                        "optional": true
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "The conference type",
+                        "enum": [
+                            "Soon",
+                            "Open",
+                            "Closed"
+                        ]
+                    },
+                    "targets": {
+                        "type": "array",
+                        "description": "The student's target",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "phd",
+                                "master",
+                                "undergraduate"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

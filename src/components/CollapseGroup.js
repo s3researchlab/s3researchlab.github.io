@@ -1,10 +1,8 @@
-function generateId(text) {
-    return "p-" + text.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-");
-}
+import IdUtils from "../utils/id-utils";
 
 function CollapseGroup(props) {
 
-    const id = props.id || generateId(props.title);
+    const id = props.id || IdUtils.generateId(props.title);
     const collapsed = props.collapsed ? "collapsed" : "";
     const show = props.collapsed ? "" : "show";
 

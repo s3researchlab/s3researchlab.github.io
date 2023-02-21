@@ -1,17 +1,4 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/utilities";
-
-$primary: #ffcc00;
-$foreground: #8a8f98;
-
-
 $dracula-background: #15171B;
-// $dracula-current-line: #1D1E26;
-$dracula-current-line: #282a36;
-// $dracula-muted: #8a8f98;
-$dracula-disabled: #6c7393;
 
 $dracula-cyan: #80FFEA;
 $dracula-green: #8aff80;
@@ -21,6 +8,31 @@ $dracula-purple: #9580FF;
 $dracula-red: #ff9580;
 $dracula-yellow: #ffff80;
 $dracula-white: #f8f8f2;
+
+/*********************************
+ * Bootstrap colors              *
+ *********************************/
+
+$primary: $dracula-purple;
+$secondary: orange;
+$success: $dracula-green;
+$danger: $dracula-red;
+$warning: $dracula-yellow;
+$info: $dracula-cyan;
+$light: $dracula-white;
+$dark: $dracula-background;
+$pink: $dracula-pink;
+
+@import "bootstrap";
+
+$primary: #ffcc00;
+$foreground: #8a8f98;
+
+
+// $dracula-current-line: #1D1E26;
+$dracula-current-line: #282a36;
+// $dracula-muted: #8a8f98;
+$dracula-disabled: #6c7393;
 
 $dracula-muted: #414558;
 
@@ -178,6 +190,8 @@ h4 {
             background-color: transparent !important;
         }
     }
+
+
 }
 
 .text-muted {
@@ -246,12 +260,12 @@ h4 {
 
     [data-bs-toggle="collapse"] {
 
-        margin-left: 20px;
+        margin-left: 23px;
         cursor: pointer;
 
         i::before {
-            margin-right: 5px !important;
-            margin-left: -20px;
+            margin-right: 10px !important;
+            margin-left: -26px;
             transform: rotate(90deg);
             transition-duration: 0.3s;
             transition-property: transform;
@@ -274,7 +288,7 @@ h4 {
         }
 
         ul {
-            margin-left: 0px;
+            margin-left: 10px;
         }
     }
 }
@@ -299,7 +313,7 @@ select {
     }
 }
 
-input{
+input {
     color: $dracula-white !important;
 }
 
