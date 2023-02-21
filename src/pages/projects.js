@@ -16,9 +16,9 @@ function generateResearchProject(project) {
     };
 
     const buttonColors = {
-        "Soon": "warning",
-        "Open": "green",
-        "Closed": "dark",
+        "Soon": "outline-warning",
+        "Open": "outline-green",
+        "Closed": "outline-secondary",
     };
 
     const url = project.status == "Closed"? "" : project.url;
