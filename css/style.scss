@@ -1,17 +1,9 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/utilities";
-
-$primary: #ffcc00;
-$foreground: #8a8f98;
-
-
-$dracula-background: #15171B;
-// $dracula-current-line: #1D1E26;
-$dracula-current-line: #282a36;
-// $dracula-muted: #8a8f98;
-$dracula-disabled: #6c7393;
+$dracula-black: #15171b;
+$dracula-dark: #1d1e26;
+$dracula-light-dark: #282a36;
+$dracula-secondary: #414558;
+$dracula-disabled: #8a8f98;
+$dracula-muted: $dracula-secondary;
 
 $dracula-cyan: #80FFEA;
 $dracula-green: #8aff80;
@@ -22,7 +14,21 @@ $dracula-red: #ff9580;
 $dracula-yellow: #ffff80;
 $dracula-white: #f8f8f2;
 
-$dracula-muted: #414558;
+/*********************************
+ * Bootstrap colors              *
+ *********************************/
+
+$primary: $dracula-purple;
+$secondary: $dracula-disabled;
+$success: $dracula-green;
+$danger: $dracula-red;
+$warning: $dracula-yellow;
+$info: $dracula-cyan;
+$light: $dracula-white;
+$dark: $dracula-dark;
+$pink: $dracula-pink;
+
+@import "bootstrap";
 
 /*********************************
  * Sizes                         *
@@ -31,7 +37,7 @@ $dracula-muted: #414558;
 $m-3: map-get($spacers, 3);
 
 html {
-    background-color: $dracula-background !important;
+    background-color: $dracula-black !important;
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
 }
@@ -40,17 +46,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     background-color: transparent;
     line-height: 1.5;
-    color: $foreground !important;
+    color: $dracula-disabled !important;
 }
 
 a {
-    color: $dracula-purple;
     text-decoration: none;
-
-    &:hover {
-        color: $dracula-purple;
-        opacity: 0.75 !important;
-    }
 }
 
 p {
@@ -114,12 +114,12 @@ h4 {
 
 .navbar {
 
-    background-color: $dracula-current-line !important;
+    background-color: $dracula-light-dark !important;
     flex-direction: column !important;
 
     .navbar-brand {
 
-        color: $foreground !important;
+        color: $dracula-disabled !important;
 
         img {
             @media (min-width: 575.98px) {
@@ -135,7 +135,7 @@ h4 {
     .nav-link {
 
         color: $dracula-white !important;
-        border-bottom: 1px solid $dracula-current-line;
+        border-bottom: 1px solid $dracula-light-dark;
 
         i.bi {
             margin-right: 0.5rem !important;
@@ -166,92 +166,36 @@ h4 {
     .card-header {
         font-weight: bold;
         color: $dracula-white;
-        background-color: $dracula-current-line;
+        background-color: $dracula-light-dark;
     }
 
     .list-group {
 
         .list-group-item {
 
-            color: $foreground !important;
+            color: $dracula-disabled !important;
             border-top: 1px solid $dracula-disabled !important;
             background-color: transparent !important;
         }
     }
+
+
 }
 
 .text-muted {
     color: $dracula-muted !important;
 }
 
-.text-primary {
-    color: $dracula-purple !important;
-}
-
-.text-success {
-    color: $dracula-green !important;
-}
-
-.text-info {
-    color: $dracula-cyan !important;
-}
-
-/*********************************
- * Butons                        *
- *********************************/
-
-.btn-primary {
-
-    color: $dracula-background !important;
-    background-color: $dracula-purple;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-purple !important;
-        opacity: 0.75 !important;
-    }
-}
-
-.btn-success {
-
-    color: $dracula-background !important;
-    background-color: $dracula-green;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-green !important;
-        opacity: 0.75 !important;
-    }
-}
-
-.btn-danger {
-
-    color: $dracula-background !important;
-    background-color: $dracula-red !important;
-    border-color: transparent !important;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $dracula-red !important;
-        opacity: 0.75 !important;
-    }
-}
-
 .collapse-group {
 
     [data-bs-toggle="collapse"] {
 
-        margin-left: 20px;
+        margin-left: 23px;
         cursor: pointer;
 
         i::before {
-            margin-right: 5px !important;
-            margin-left: -20px;
+            margin-right: 10px !important;
+            margin-left: -26px;
             transform: rotate(90deg);
             transition-duration: 0.3s;
             transition-property: transform;
@@ -259,8 +203,8 @@ h4 {
     }
 
     strong {
-        color: $dracula-cyan;
-        font-weight: bold;
+        color: $success;
+        font-weight: normal;
     }
 
     .collapsed i::before {
@@ -274,7 +218,7 @@ h4 {
         }
 
         ul {
-            margin-left: 0px;
+            margin-left: 10px;
         }
     }
 }
@@ -286,20 +230,20 @@ hr {
 input,
 select {
 
-    color: $foreground !important;
-    background-color: $dracula-current-line !important;
-    border-color: $dracula-current-line !important;
+    color: $dracula-disabled !important;
+    background-color: $dracula-light-dark !important;
+    border-color: $dracula-light-dark !important;
 
     &:focus {
         border-color: $dracula-muted !important;
     }
 
     &::placeholder {
-        color: $foreground !important;
+        color: $dracula-disabled !important;
     }
 }
 
-input{
+input {
     color: $dracula-white !important;
 }
 
