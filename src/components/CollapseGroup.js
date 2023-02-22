@@ -8,10 +8,10 @@ function CollapseGroup(props) {
 
     return (
         <div className="collapse-group" key={id}>
-            <p data-bs-toggle="collapse" className={`fw-bold ${collapsed}`} data-bs-target={`#${id}`} >
-                <i className={"bi bi-chevron-right"}/><span className="text-white">{props.title}</span>
+            <p data-bs-toggle="collapse" className={`mb-0 ${collapsed}`} data-bs-target={`#${id}`} >
+                <i className={"bi bi-chevron-right"} /><span className="text-white">{props.title}</span>
             </p>
-            <div className={`content collapse ${show}`} id={id}>
+            <div className={`content collapse mt-3 ${show}`} id={id}>
                 {props.children}
             </div>
         </div>

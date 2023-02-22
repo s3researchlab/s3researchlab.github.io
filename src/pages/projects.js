@@ -1,6 +1,7 @@
 import yaml from "js-yaml";
 import { Card, ListGroup, Button, Badge } from "react-bootstrap";
 
+import CollapseGroup from "../components/CollapseGroup";
 import Layout from "../components/layout/Layout";
 import PathUtils from "../utils/path-utils";
 import IdUtils from "../utils/id-utils";
@@ -26,20 +27,15 @@ function generateResearchProject(project) {
 
     return  (
         <ListGroup.Item className="d-flex justify-content-between align-items-center" key={id}>
-            <div className="collapse-group me-3" >
-                <p data-bs-toggle="collapse" className="collapsed mb-0" data-bs-target={`#${id}`} >
-                    <i className={"bi bi-chevron-right"} /><span className="text-white">{project.title}</span>
-                </p>
-                <div className={"collapse"} id={id}>
-                    <p className="small ms-4 mt-3">{project.description}</p>
-                    <div className="ms-3 my-2">
-                        {project.targets.map((target, key) => {
-                            return <Badge bg={badgeColors[target]} text="dark" className="ms-2" key={key}>{target}</Badge>;
-                        })}
-                    </div>
+            <CollapseGroup title={project.title} collapsed={true}>
+                <p className="small">{project.description}</p>
+                <div className="ms-3 my-2">
+                    {project.targets.map((target, key) => {
+                        return <Badge bg={badgeColors[target]} text="dark" className="ms-2" key={key}>{target}</Badge>;
+                    })}
                 </div>
-            </div>
-            <Button variant={buttonColors[project.status]} href={url} className={disabled}>
+            </CollapseGroup>
+            <Button variant={buttonColors[project.status]} size="sm" href={url} className={`ms-3 ${disabled}`}>
                 {project.status}
             </Button>
         </ListGroup.Item>
