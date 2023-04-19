@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=../../schemas/projects.schema.json
+name: Graduate Student Research Assistant (GSRA)
+description: The Graduate Student Research Assistantship (GSRA) program at the University of Michigan-Flint is a vehicle to provide financial support for the academically-related research activities of active UM-Flint graduate students.
+projects:
+
+  - title: Selecting Requirements for the Next Release Problem with Optimization Algorithms
+    description: This project will be divided into two phases. The phase one will address a systematic literature review, where the student will identify, evaluate and synthesize all available papers related to optimization algorithms and software requirements. The process will involve a rigorous and comprehensive search of published studies in the main venues, as well as a critical assessment of their quality and relevance. As an output of this phase, the student is expected to write a research paper addressing all findings and submit it to a journal in the Software Engineering area. The phase two will address the application of the state-of-the-art optimization algorithm found in the previous phase. The idea is to implement the algorithm, run experiments, and compare the results against the most related work in the NRP problem. Also, in the end, the student is expected to write a research paper and submit it to a conference in the Software Engineering area.
+    url: https://careers.umich.edu
+    targets:
+      - master
+      - phd
+    status: Open
+

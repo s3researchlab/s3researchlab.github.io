@@ -5,6 +5,6 @@ projects:
 
   - title: Towards Meaningful and Real Refactoring Operations
     description: TBA
-    status: Soon
+    status: Open
     targets:
       - undergraduate

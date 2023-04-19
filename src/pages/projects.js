@@ -18,7 +18,7 @@ function generateResearchProject(project) {
 
     const buttonColors = {
         "Soon": "warning",
-        "Open": "green",
+        "Open": "success",
         "Closed": "outline-secondary",
     };
 
