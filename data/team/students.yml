@@ -8,11 +8,12 @@
   status: current
 
 - name: Aidan Leach
-  image: no-image.jpg
+  image: aidan-leach.png
   position: Undergraduate Research Opportunity Program (UROP)
   degree: undergraduate
   when: 2023
   status: current
+  url: https://www.linkedin.com/in/digitalsandman/
 
 - name: Tyler Gibbard
   image: tyler-gibbard.png
@@ -20,6 +21,7 @@
   degree: undergraduate
   when: 2022
   status: former
+  url: https://www.linkedin.com/in/tyler-gibbard-2bb996238/
 
 - name: Amanda Binu
   image: amanda-binu.png
@@ -27,3 +29,4 @@
   degree: undergraduate
   when: 2022
   status: former
+  url: https://www.linkedin.com/in/amandabinu/

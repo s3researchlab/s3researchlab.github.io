@@ -57,6 +57,7 @@ function filterOutStudents(students, status, degree) {
             position={el.position}
             img={el.image}
             when={el.when}
+            url={el.url}
         />;
     });
 }
