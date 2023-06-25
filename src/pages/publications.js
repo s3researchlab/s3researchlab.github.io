@@ -113,7 +113,7 @@ function PublicationsPage({ entries }) {
     let groupsAsHtml = createHTML(groupedList);
 
     return (
-        <Layout menu="Publications">
+        <Layout menu="Publications" className="publications">
 
             <p>This is not the full list. We will update it as soon as possible.</p>
 

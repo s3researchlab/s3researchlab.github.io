@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import TopBar from "./TopBar";
 
-function Layout({ children, menu }) {
+function Layout({ children, menu, className = ""}) {
 
     let page = menu == "Home" ? "" : menu;
     let title = menu == "Home" ? "" : `${menu} - `;
@@ -22,8 +22,8 @@ function Layout({ children, menu }) {
                 <NavBar />
             </header>
             <main>
-                <Container>
-                    <h3>{page}</h3>
+                <Container className={className}>
+                    <h3 className="text-dark">{page}</h3>
                     {children}
                 </Container>
             </main>

@@ -13,7 +13,7 @@ function generateResearchProject(project) {
     const badgeColors = {
         "phd": "warning",
         "master": "info",
-        "undergraduate": "danger",
+        "undergraduate": "success",
     };
 
     const buttonColors = {
@@ -28,10 +28,10 @@ function generateResearchProject(project) {
     return  (
         <ListGroup.Item className="d-flex justify-content-between align-items-center" key={id}>
             <CollapseGroup title={project.title} collapsed={true}>
-                <p className="small">{project.description}</p>
-                <div className="ms-3 my-2">
+                <p className="small text-secondary">{project.description}</p>
+                <div className="my-2">
                     {project.targets.map((target, key) => {
-                        return <Badge bg={badgeColors[target]} text="dark" className="ms-2" key={key}>{target}</Badge>;
+                        return <Badge bg={badgeColors[target]} className="me-2" key={key}>{target}</Badge>;
                     })}
                 </div>
             </CollapseGroup>
@@ -50,7 +50,8 @@ function generateResearchInitiative(initiative) {
     });
 
     return <div key={key}>
-        <h4>{initiative.name}</h4>
+        <h4 className="text-dark">{initiative.name}</h4>
+        <hr/>
         <p>{initiative.description}</p>
         <Card className="my-4" >
             <Card.Header>

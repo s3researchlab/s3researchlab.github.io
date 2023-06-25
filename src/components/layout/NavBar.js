@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
+import DarkModeNavItem from "../DarkModeNavItem";
 
 function NavLink({ href, exact, children }) {
 
@@ -25,9 +26,7 @@ function NavBar() {
     return (
         <Navbar expand="sm" bg="light">
             <Container >
-                <span></span>
-                <Navbar.Toggle className="" />
-                <Navbar.Collapse >
+                <Navbar.Collapse>
                     <Nav>
                         <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
                         <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
@@ -36,6 +35,10 @@ function NavBar() {
                         <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
                     </Nav>
                 </Navbar.Collapse>
+                <Navbar.Toggle className="text-light" />
+                <Nav className="ms-auto">
+                    <DarkModeNavItem />
+                </Nav>
             </Container>
         </Navbar>
     );

@@ -6,7 +6,7 @@ import Package from "../../package.json";
 export default function Document() {
 
     return (
-        <Html lang="en" className="h-100">
+        <Html lang="en" className="h-100" data-bs-theme="dark">
             <Head>
                 <meta charSet="utf-8" />
 
@@ -37,7 +37,7 @@ export default function Document() {
                 <Main />
                 <NextScript />
                 <footer className="footer mt-auto ">
-                    <Container className="text-center my-2 small text-muted">
+                    <Container className="text-center my-2 small">
                         <span>&copy; {new Date().getFullYear()} S3 Research Lab</span>
                     </Container>
                 </footer>

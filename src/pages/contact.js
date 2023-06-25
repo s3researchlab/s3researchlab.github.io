@@ -1,7 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import Layout from "../components/layout/Layout";
 
-function ContactPage() {
+export default function ContactPage() {
 
     return (
         <Layout menu="Contact">
@@ -18,7 +18,8 @@ function ContactPage() {
                         Flint, Michigan 48502-1950, USA<br />
                     </address>
 
-                    <img className="img-fluid mb-3" src="images/cit-logo.png" width="400px"/>
+                    <img className="img-fluid mb-3 cit-logo-dark d-none" src="images/cit-logo-dark.png" width="400px"/>
+                    <img className="img-fluid mb-3 cit-logo-light " src="images/cit-logo-light.png" width="400px"/>
 
                 </Col>
                 <Col sm="12" md="4">
@@ -28,5 +29,3 @@ function ContactPage() {
         </Layout>
     );
 }
-
-export default ContactPage;

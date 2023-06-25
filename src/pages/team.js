@@ -9,9 +9,9 @@ function Member({ name, position, img, url, when }) {
         <a href={url} target="_blank">
             <img className="rounded mb-2 img-fluid" src={`images/profile-photo/${img}`} width={180} />
         </a>
-        <p className="text-light mb-0">{name}</p>
+        <p className="text-dark fw-bold mb-0">{name}</p>
         <p className="small mb-0 text-start">{position}</p>
-        <p className="small mb-3 text-start">{when}</p>
+        <p className="small mb-3 text-start text-secondary">{when}</p>
     </>;
 }
 
@@ -69,37 +69,43 @@ function TeamPage({ students, faculty }) {
 
             <p>Meet our team! Click on profile picture to open their personal websites.</p>
 
-            <h4>Principal Investigator</h4>
+            <h4 className="text-dark">Principal Investigator</h4>
+            <hr/>
 
             <Group>
                 {filterOutFaculty(faculty, "pi")}
             </Group>
 
-            <h4>Affiliated Faculty Members</h4>
+            <h4 className="text-dark">Affiliated Faculty Members</h4>
+            <hr/>
 
             <Group>
                 {filterOutFaculty(faculty, "affiliated")}
             </Group>
 
-            <h4>Current Ph.D. Students</h4>
+            <h4 className="text-dark">Current Ph.D. Students</h4>
+            <hr/>
 
             <Group>
                 {filterOutStudents(students, "current", "phd")}
             </Group>
 
-            <h4>Current Master's Students</h4>
+            <h4 className="text-dark">Current Master's Students</h4>
+            <hr/>
 
             <Group>
                 {filterOutStudents(students, "current", "master")}
             </Group>
 
-            <h4>Current Undergraduate Students</h4>
+            <h4 className="text-dark">Current Undergraduate Students</h4>
+            <hr/>
 
             <Group>
                 {filterOutStudents(students, "current", "undergraduate")}
             </Group>
 
-            <h4>Alumni</h4>
+            <h4 className="text-dark">Alumni</h4>
+            <hr/>
 
             <p className="mb-3 mt-3 text-light">Undergraduate Students</p>
 
