@@ -18,36 +18,35 @@ jobs:
       with:
         node-version: 16
 
-    - id: releaser
-      name: Verifying if a new version is needed
-      uses: thiagodnf/new-version-decider@v0.0.5
+    - id: version-decider
+      name: Version Decider
+      uses: thiagodnf/version-decider@v1.0.7
       with:
-        loader: nodejs
-        configurationFile: ./package.json
+        file: ./package.json
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Creating a new release on Github
       uses: softprops/action-gh-release@v1
-      if: steps.releaser.outputs.newVersion == 'true'
+      if: steps.version-decider.outputs.new
       with:
-        name: ${{ steps.releaser.outputs.currentVersion }}
-        tag_name: v${{steps.releaser.outputs.currentVersion}}
+        name: v${{ steps.version-decider.outputs.version }}
+        tag_name: v${{ steps.version-decider.outputs.version }}
         # files: "*"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - if: steps.releaser.outputs.newVersion == 'true'
+    - if: steps.version-decider.outputs.new
       run: npm ci
 
-    - if: steps.releaser.outputs.newVersion == 'true'
+    - if: steps.version-decider.outputs.new
       run: npm run build
 
-    - if: steps.releaser.outputs.newVersion == 'true'
+    - if: steps.version-decider.outputs.new
       name: Add .nojekyll file
       run: touch ./out/.nojekyll
 
-    - if: steps.releaser.outputs.newVersion == 'true'
+    - if: steps.version-decider.outputs.new
       name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
