@@ -55,6 +55,9 @@ class BibTexUtils {
             if(entry.AUTHOR){
                 entry["AUTHORS"] = entry.AUTHOR.split(" and ").map(e => e.trim());
             }
+            if(entry.EDITOR){
+                entry["EDITORS"] = entry.EDITOR.split(" and ").map(e => e.trim());
+            }
             entry["HTML"] = BibTexFormatting.getHTML(entry);
 
             const missingKeys = BibTexUtils.getMissingKeys(entry);

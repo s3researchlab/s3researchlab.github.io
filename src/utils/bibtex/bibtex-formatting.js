@@ -14,7 +14,10 @@ class BibTexFormatting {
         format = format.replace("{PAGES}", BibTexFormatting.getPages(entry));
         format = format.replace("{MONTH}", BibTexFormatting.getMonth(entry));
         format = format.replace("{YEAR}", `. ${entry.YEAR}`);
+        format = format.replace("{EDITOR}", BibTexFormatting.getEditors(entry));
         format = format.replace("{TYPE}", `. ${entry.TYPE}`);
+        format = format.replace("{SERIES}", `. ${entry.SERIES}`);
+        format = format.replace("{ISBN}", `ISBN: ${entry.ISBN}`);
         format = format.replace("{SCHOOL}", `. ${entry.SCHOOL}`);
         format = format.replace("{VOLUME}", ` ${entry.VOLUME}`);
         format = format.replace("{NUMBER}", BibTexFormatting.getNumber(entry));
@@ -39,12 +42,27 @@ class BibTexFormatting {
         } else if (entry.type == "techreport") {
             return "AUTHOR (YEAR). <a class='text-primary fw-bold' href='#'>TITLE</a>. <em>INSTITUTION. NUMBER. Tech. Rep.<\/em>";
         } else if (entry.type == "inbook") {
-            return "AUTHOR (YEAR). <a class='text-primary fw-bold' href='#'>TITLE</a> in <em>BOOKTITLE<\/em>, Edited by EDITOR, PUBLISHER, pp. PAGES, <em> SERIES<\/em>, Vol. VOLUME, ISBN: ISBN'";
+            return "{AUTHOR}{TITLE}{BOOKTITLE}, Edited by {EDITOR}{PUBLISHER}{YEAR}{PAGES}, {ISBN}{DOI}.";
         } else if (entry.type == "unpublished") {
             return "{AUTHOR}{TITLE}{TYPE}{SCHOOL}{NOTE}{YEAR}";
         } else {
             return "AUTHOR (YEAR). <a class='text-primary fw-bold' href='#'>TITLE</a>. In <em>BOOKTITLE<\/em>, pp. PAGES, ADDRESS.";
         }
+    }
+
+    static getEditors(entry) {
+
+        if(!entry.EDITORS){
+            return "";
+        }
+
+        let formatted = [];
+
+        entry.EDITORS.forEach((author, i) => {
+            formatted.push(author);
+        });
+
+        return formatted.join(", ");
     }
 
     static getAuthors(entry) {

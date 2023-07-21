@@ -9,12 +9,13 @@ import { Col } from "react-bootstrap";
 const groups = {
     "journal": { order: 1, title: "Refereed Journal Papers" },
     "conference": { order: 2, title: "Refereed Conference Papers" },
-    "short-paper": { order: 3, title: "Refereed Short Papers, Videos, Demos, and Posters" },
-    "no-proceedings": { order: 4, title: "Workshop and Conferences without Proceedings" },
-    "unrefereed": { order: 5, title: "Unrefereed Publications" },
-    "invited-talks": { order: 6, title: "Major Invited Talks" },
-    "thesis": { order: 7, title: "Thesis" },
-    "under-review": { order: 8, title: "Under Review" }
+    "book": { order: 3, title: "Book Chapters" },
+    "short-paper": { order: 4, title: "Refereed Short Papers, Videos, Demos, and Posters" },
+    "no-proceedings": { order: 5, title: "Workshop and Conferences without Proceedings" },
+    "unrefereed": { order: 6, title: "Unrefereed Publications" },
+    "invited-talks": { order: 7, title: "Major Invited Talks" },
+    "thesis": { order: 8, title: "Thesis" },
+    "under-review": { order: 9, title: "Under Review" }
 };
 
 for (let i = 2000; i < 2040; i++) {
