@@ -3,16 +3,16 @@ import yaml from "js-yaml";
 import Layout from "../components/layout/Layout";
 import PathUtils from "../utils/path-utils";
 
-function Member({ name, position, img, url, when }) {
+function Member({ id, name, position, img, url, when }) {
 
-    return <>
+    return <div className="member" key={id}>
         <a href={url} target="_blank">
             <img className="rounded mb-2 img-fluid" src={`images/profile-photo/${img}`} width={180} />
         </a>
         <p className="text-dark fw-bold mb-0">{name}</p>
         <p className="small mb-0 text-start">{position}</p>
         <p className="small mb-3 text-start text-secondary">{when}</p>
-    </>;
+    </div>;
 }
 
 function Group({ children }) {
@@ -51,8 +51,9 @@ function filterOutFaculty(faculty, status) {
 
 function filterOutStudents(students, status, degree) {
 
-    return students.filter(el => el.status === status && el.degree === degree).map(el => {
+    return students.filter(el => el.status === status && el.degree === degree).map((el,i) => {
         return <Member
+            id={i}
             name={el.name}
             position={el.position}
             img={el.image}

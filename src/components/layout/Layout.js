@@ -19,7 +19,7 @@ function Layout({ children, menu, className = ""}) {
             </Head>
             <header>
                 <TopBar />
-                <NavBar />
+                {/* <NavBar /> */}
             </header>
             <main>
                 <Container className={className}>

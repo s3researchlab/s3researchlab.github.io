@@ -1,20 +1,54 @@
 import Link from "next/link";
 
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Navbar, Nav } from "react-bootstrap";
+import DarkModeNavItem from "../DarkModeNavItem";
+import { useRouter } from "next/router";
+
+function NavLink({ href, exact, children }) {
+
+    const { pathname } = useRouter();
+
+    let isActive = "";
+
+    if (exact) {
+        if (pathname === href) {
+            isActive = "active";
+        }
+    } else if (pathname.startsWith(href)) {
+        isActive = "active";
+    }
+
+    return <Link href={href} className={`nav-link ${isActive}`}>{children}</Link>;
+}
 
 function TopBar() {
 
     return (
-        <nav className="topbar d-flex align-items-center">
-            <Container className="d-flex justify-content-between align-items-center">
-                <Link href="/">
-                    <img className="img-fluid" src="images/logo-long-name.png" />
-                </Link>
-                <Button variant="primary" href="/projects" className="d-none d-md-block">
-                    Join Us
-                </Button>
+        <Navbar expand="md" bg="dark">
+            <Container fluid>
+                <Navbar.Brand href="/">
+                    <img
+                        src="images/logo.png"
+                        width="169"
+                        height="32"
+                        className="d-inline-block align-top"
+                    />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
+                        <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
+                        <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
+                        <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
+                        <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
+                    </Nav>
+                    <Nav>
+                        <DarkModeNavItem />
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
-        </nav>
+        </Navbar>
     );
 }
 
