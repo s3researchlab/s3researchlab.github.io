@@ -40,6 +40,7 @@ html {
 body {
     line-height: 1.5;
     text-align: justify;
+    margin-top: 70px;
 }
 
 @include color-mode(dark) {
@@ -108,12 +109,6 @@ main {
 
     @media (min-width: 575.98px) {
         padding-top: 7rem !important;
-    }
-
-    .btn {
-        @media (min-width: 575.98px) {
-            min-width: 150px;
-        }
     }
 }
 
