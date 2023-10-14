@@ -20,14 +20,9 @@ $dracula-white: #f8f8f2;
 
 $primary: $dracula-purple;
 
-// $secondary: $dracula-disabled;
-// $success: $dracula-green;
-// $danger: $dracula-red;
-// $warning: $dracula-yellow;
-// $info: $dracula-cyan;
-// $light: $dracula-white;
-// $dark: $dracula-dark;
-// $pink: $dracula-pink;
+$dark: #15171B;
+$body-bg-dark: #1D1E25;
+$body-color-dark: $dracula-disabled;
 
 @import "bootstrap";
 
@@ -48,19 +43,13 @@ body {
 }
 
 @include color-mode(dark) {
+
     .cit-logo-light {
         display: block !important;
     }
+
     .cit-logo-dark {
         display: none !important;
-    }
-}
-
-@include color-mode(dark) {
-
-    body {
-        background-color: $dracula-black !important;
-        color: $dracula-disabled !important;
     }
 
     .text-dark {
@@ -74,6 +63,7 @@ body {
     .cit-logo-light {
         display: none !important;
     }
+
     .cit-logo-dark {
         display: block !important;
     }
@@ -81,7 +71,6 @@ body {
 
 header {
     margin-bottom: $m-3;
-    background-color: $dracula-black !important;
 }
 
 main {
@@ -121,13 +110,6 @@ main {
     }
 }
 
-.dark-mode {
-
-    &.dropdown-toggle::after {
-        color: var(--bs-body-color) !important
-    }
-}
-
 .banner {
 
     padding-top: 1rem !important;
@@ -143,34 +125,13 @@ main {
     }
 }
 
-.topbar {
-    min-height: 100px;
-}
-
 .navbar {
 
-    background-color: $dracula-light-dark !important;
     flex-direction: column !important;
-
-    .navbar-brand {
-
-        color: $dracula-disabled !important;
-
-        img {
-            @media (min-width: 575.98px) {
-                width: 300px !important;
-            }
-
-            @media (max-width: 575.98px) {
-                width: 200px !important;
-            }
-        }
-    }
 
     .nav-link {
 
         color: $dracula-white !important;
-        border-bottom: 1px solid $dracula-light-dark;
 
         i.bi {
             margin-right: 0.5rem !important;
