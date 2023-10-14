@@ -5,14 +5,22 @@ import PathUtils from "../utils/path-utils";
 
 function Member({ id, name, position, img, url, when }) {
 
-    return <div className="member" key={id}>
-        <a href={url} target="_blank">
-            <img className="rounded mb-2 img-fluid" src={`images/profile-photo/${img}`} width={180} />
-        </a>
-        <p className="text-dark fw-bold mb-0">{name}</p>
-        <p className="small mb-0 text-start">{position}</p>
-        <p className="small mb-3 text-start text-secondary">{when}</p>
-    </div>;
+    return <>
+        <div className="member" key={id}>
+            <div class="d-flex">
+                <div class="flex-shrink-0">
+                    <a href={url} target="_blank">
+                        <img className="rounded" src={`images/profile-photo/${img}`} width={65} />
+                    </a>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                    <p className="text-dark fw-bold mb-0">{name}</p>
+                    <p className="small mb-0 text-start">{position}</p>
+                    <p className="small mb-3 text-start text-secondary">{when}</p>
+                </div>
+            </div>
+        </div >
+    </>;
 }
 
 function Group({ children }) {
@@ -26,7 +34,7 @@ function Group({ children }) {
     }
 
     const columns = children.map((child, i) =>
-        <Col xs={6} sm={4} md={2} key={i} >
+        <Col xs={12} sm={6} key={i} >
             {child}
         </Col>
     );
@@ -51,7 +59,7 @@ function filterOutFaculty(faculty, status) {
 
 function filterOutStudents(students, status, degree) {
 
-    return students.filter(el => el.status === status && el.degree === degree).map((el,i) => {
+    return students.filter(el => el.status === status && el.degree === degree).map((el, i) => {
         return <Member
             id={i}
             name={el.name}
@@ -71,42 +79,42 @@ function TeamPage({ students, faculty }) {
             <p>Meet our team! Click on profile picture to open their personal websites.</p>
 
             <h4 className="text-dark">Principal Investigator</h4>
-            <hr/>
+            <hr />
 
             <Group>
                 {filterOutFaculty(faculty, "pi")}
             </Group>
 
             <h4 className="text-dark">Affiliated Faculty Members</h4>
-            <hr/>
+            <hr />
 
             <Group>
                 {filterOutFaculty(faculty, "affiliated")}
             </Group>
 
             <h4 className="text-dark">Current Ph.D. Students</h4>
-            <hr/>
+            <hr />
 
             <Group>
                 {filterOutStudents(students, "current", "phd")}
             </Group>
 
             <h4 className="text-dark">Current Master's Students</h4>
-            <hr/>
+            <hr />
 
             <Group>
                 {filterOutStudents(students, "current", "master")}
             </Group>
 
             <h4 className="text-dark">Current Undergraduate Students</h4>
-            <hr/>
+            <hr />
 
             <Group>
                 {filterOutStudents(students, "current", "undergraduate")}
             </Group>
 
             <h4 className="text-dark">Alumni</h4>
-            <hr/>
+            <hr />
 
             <p className="mb-3 mt-3 text-light">Undergraduate Students</p>
 
