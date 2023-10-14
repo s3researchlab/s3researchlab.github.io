@@ -13,10 +13,10 @@ function Member({ id, name, position, img, url, when }) {
                         <img className="rounded" src={`images/profile-photo/${img}`} width={65} />
                     </a>
                 </div>
-                <div class="flex-grow-1 ms-3">
+                <div class="flex-grow-1 ms-2">
                     <p className="text-dark fw-bold mb-0">{name}</p>
-                    <p className="small mb-0 text-start">{position}</p>
-                    <p className="small mb-3 text-start text-secondary">{when}</p>
+                    <p className="mb-0">{position}</p>
+                    <p className="small text-start text-secondary">{when}</p>
                 </div>
             </div>
         </div >
@@ -46,8 +46,9 @@ function Group({ children }) {
 
 function filterOutFaculty(faculty, status) {
 
-    return faculty.filter(el => el.status === status).map(p => {
+    return faculty.filter(el => el.status === status).map((p, i) => {
         return <Member
+            id={i}
             name={p.name}
             position={p.position}
             img={p.image}
