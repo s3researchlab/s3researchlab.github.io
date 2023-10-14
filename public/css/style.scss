@@ -42,6 +42,10 @@ body {
     text-align: justify;
 }
 
+// a{
+//     color: $dracula-purple !important;
+// }
+
 @include color-mode(dark) {
 
     .text-dark {
@@ -108,12 +112,6 @@ main {
 
     @media (min-width: 575.98px) {
         padding-top: 7rem !important;
-    }
-
-    .btn {
-        @media (min-width: 575.98px) {
-            min-width: 150px;
-        }
     }
 }
 
