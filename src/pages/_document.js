@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Container } from "react-bootstrap";
 
 import Package from "../../package.json";
 
@@ -33,14 +32,9 @@ export default function Document() {
                 <meta property="og:locale:alternate" content="pt_BR" />
 
             </Head>
-            <body className="d-flex flex-column h-100">
+            <body>
                 <Main />
                 <NextScript />
-                <footer className="footer mt-auto ">
-                    <Container className="text-center my-2 small">
-                        <span>&copy; {new Date().getFullYear()} S3 Research Lab</span>
-                    </Container>
-                </footer>
             </body>
         </Html>
     );
