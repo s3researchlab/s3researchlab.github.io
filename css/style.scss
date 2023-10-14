@@ -9,7 +9,7 @@ $dracula-cyan: #80FFEA;
 $dracula-green: #8aff80;
 $dracula-orange: #ffca80;
 $dracula-pink: #ff80bf;
-$dracula-purple: #9580FF;
+$dracula-purple: #9281F7;
 $dracula-red: #ff9580;
 $dracula-yellow: #ffff80;
 $dracula-white: #f8f8f2;
@@ -43,14 +43,6 @@ body {
 }
 
 @include color-mode(dark) {
-
-    .cit-logo-light {
-        display: block !important;
-    }
-
-    .cit-logo-dark {
-        display: none !important;
-    }
 
     .text-dark {
         color: white !important;
