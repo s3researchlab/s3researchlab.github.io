@@ -40,11 +40,8 @@ html {
 body {
     line-height: 1.5;
     text-align: justify;
+    margin-top: 70px;
 }
-
-// a{
-//     color: $dracula-purple !important;
-// }
 
 @include color-mode(dark) {
 

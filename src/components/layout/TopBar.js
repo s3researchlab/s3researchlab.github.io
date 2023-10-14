@@ -24,7 +24,7 @@ function NavLink({ href, exact, children }) {
 function TopBar() {
 
     return (
-        <Navbar expand="md" bg="dark">
+        <Navbar expand="md" bg="dark" fixed="top">
             <Container fluid>
                 <Navbar.Brand href="/">
                     <img
