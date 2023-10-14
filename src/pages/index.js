@@ -47,7 +47,7 @@ export default function IndexPage() {
                     <h1 className="fw-bold text-dark">{technologies[index]}</h1>
                     <h2>applied to software systems development</h2>
                 </div>
-                <p className="mb-5 text-center">Smart technologies in all aspects of the design, implementation, evaluation, and verification of software systems</p>
+                <p className="mb-5 text-center">We are a research lab specializing in Computational Search for advancing Software Engineering methodologies and technologies</p>
                 <div className="mb-5">
                     <Link href="./projects" className="btn btn-primary">Explore Projects</Link>
                 </div>

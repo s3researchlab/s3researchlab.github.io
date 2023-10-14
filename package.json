@@ -1,13 +1,14 @@
 {
     "name": "s3researchlab.github.io",
-    "description": "Computational Search for Software Engineering",
+    "description": "Research Lab Specialized in Computational Search for Software Engineering",
     "version": "0.1.29",
     "author": "S3 Research Lab",
     "license": "MIT",
     "homepage": "s3researchlab.github.io",
     "keywords": [
-        "s3",
-        "research lab"
+        "s3 research lab",
+        "computational search",
+        "software engineering"
     ],
     "repository": {
         "type": "git",
