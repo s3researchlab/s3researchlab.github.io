@@ -2,7 +2,7 @@ export default class Random {
 
     /**
      * @param {number} min the lower number
-     * @param {number} max the higher number (inclusive)
+     * @param {number} max the higher number
      * @returns a random number between min and max (both included):
      */
     static nextInt(min, max) {
