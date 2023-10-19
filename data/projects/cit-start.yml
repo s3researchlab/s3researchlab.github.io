@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=../../schemas/projects.schema.json
 name: CIT START Program
 description: START is a new program in CIT that offers a mechanism for faculty members to obtain preliminary results for new and innovative research that is not yet ready for external proposal submission.
+active: false
 projects:
 
   - title: Towards Meaningful and Real Refactoring Operations

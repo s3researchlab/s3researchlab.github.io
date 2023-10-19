@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=../../schemas/projects.schema.json
 name: Undergraduate Research Opportunity Program (UROP)
 description: The Undergraduate Research Opportunity Program (UROP) is designed to support collaborations between UM-Flint undergraduate students and faculty researchers. UROP allows students to earn paid (or volunteer) hands-on research experience working alongside faculty on cutting-edge projects.
+active: false
 projects:
 
   - title: Arduino-powered Autonomous 'Follow Me' Car With Obstacle Avoidance

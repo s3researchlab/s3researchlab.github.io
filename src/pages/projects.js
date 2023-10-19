@@ -1,4 +1,5 @@
 import yaml from "js-yaml";
+import Link from "next/link";
 import { Card, ListGroup, Button, Badge } from "react-bootstrap";
 
 import CollapseGroup from "../components/CollapseGroup";
@@ -22,26 +23,31 @@ function generateResearchProject(project) {
         "Closed": "outline-secondary",
     };
 
-    const url = project.status == "Closed"? "" : project.url;
-    const disabled = project.status == "Closed"? "disabled" : "";
+    const url = project.status == "Closed" ? "" : project.url;
 
-    return  (
+    return (
         <ListGroup.Item className="d-flex justify-content-between align-items-center" key={id}>
             <CollapseGroup title={project.title} collapsed={true}>
                 <p className="small text-secondary">{project.description}</p>
                 <div className="my-2">
-                    {project.targets.map((target, key) => {
-                        return <Badge bg={badgeColors[target]} className="me-2" key={key}>{target}</Badge>;
-                    })}
+                    <Link href={url} target="_blank">
+                        Apply Now!
+                    </Link>
                 </div>
             </CollapseGroup>
-            <Button variant={buttonColors[project.status]} size="sm" href={url} className={`ms-3 ${disabled}`}>
-                {project.status}
-            </Button>
+            <div>
+                {project.targets.map((target, key) => {
+                    return <Badge bg={badgeColors[target]} text="dark" className="me-2" key={key}>{target}</Badge>;
+                })}
+            </div>
         </ListGroup.Item>
     );
 }
 function generateResearchInitiative(initiative) {
+
+    if (!initiative.active) {
+        return <></>;
+    }
 
     const key = IdUtils.generateId(initiative.name);
 
@@ -51,7 +57,7 @@ function generateResearchInitiative(initiative) {
 
     return <div key={key}>
         <h4 className="text-dark">{initiative.name}</h4>
-        <hr/>
+        <hr />
         <p>{initiative.description}</p>
         <Card className="my-4" >
             <Card.Header>

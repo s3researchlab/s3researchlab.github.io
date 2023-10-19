@@ -5,7 +5,8 @@
     "type": "object",
     "required": [
         "name",
-        "projects"
+        "projects",
+        "active"
     ],
     "properties": {
         "name": {
@@ -16,6 +17,9 @@
             "type": "string",
             "description": "The description of the initiative",
             "optional": true
+        },
+        "active": {
+            "type": "boolean"
         },
         "projects": {
             "type": "array",
