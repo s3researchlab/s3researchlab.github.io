@@ -72,19 +72,19 @@ function TeamPage({ students, faculty }) {
                 </Group>
             </Section>
 
-            <Section>
+            {/* <Section>
                 <Section.Title>Current Ph.D. Students</Section.Title>
                 <Group>
                     {filterOutStudents(students, "current", "phd")}
                 </Group>
-            </Section>
+            </Section> */}
 
-            <Section>
+            {/* <Section>
                 <Section.Title>Current Master's Students</Section.Title>
                 <Group>
                     {filterOutStudents(students, "current", "master")}
                 </Group>
-            </Section>
+            </Section> */}
 
             <Section>
                 <Section.Title>Current Undergraduate Students</Section.Title>
