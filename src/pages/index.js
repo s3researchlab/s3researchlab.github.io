@@ -2,6 +2,8 @@ import Layout from "../components/layout/Layout";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+import Package from "../../package.json";
+
 const technologies = [
     "Machine Learning",
     "Evolutionary Algorithms",
@@ -47,7 +49,7 @@ export default function IndexPage() {
                     <h1 className="fw-bold text-dark">{technologies[index]}</h1>
                     <h2>applied to software systems development</h2>
                 </div>
-                <p className="mb-5 text-center">We are a research lab specializing in Computational Search for advancing Software Engineering methodologies and technologies</p>
+                <p className="mb-5 text-center">{Package.description}</p>
                 <div className="mb-5">
                     <Link href="./projects" className="btn btn-primary">Explore Projects</Link>
                 </div>
