@@ -5,7 +5,7 @@ $dracula-secondary: #414558;
 $dracula-disabled: #8a8f98;
 $dracula-muted: $dracula-secondary;
 
-$dracula-cyan: #80FFEA;
+$dracula-cyan: #80ffea;
 $dracula-green: #8aff80;
 $dracula-orange: #ffca80;
 $dracula-pink: #ff80bf;
@@ -19,6 +19,9 @@ $dracula-white: #f8f8f2;
  *********************************/
 
 $primary: $dracula-purple;
+$success: $dracula-green;
+$info: $dracula-cyan;
+$warning: $dracula-orange;
 
 $dark: #15171B;
 $body-bg-dark: #1D1E25;
@@ -64,6 +67,10 @@ body {
 
 header {
     margin-bottom: $m-3;
+}
+
+.badge.text-dark {
+    color: $dark !important;
 }
 
 main {
