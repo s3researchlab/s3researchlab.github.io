@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import Package from "../../package.json";
+import Random from "../utils/Random";
 
 const technologies = [
     "Genetic Algorithms",
@@ -18,6 +19,7 @@ const areas = [
     "Software Testing",
     "Software Maintenance",
     "Software Refactoring",
+    "Software Product Lines"
 ];
 
 function SocialIcon({ href, icon, children }) {
@@ -31,40 +33,27 @@ function SocialIcon({ href, icon, children }) {
 
 export default function IndexPage() {
 
-    const [indexTechnology, setIndexTechnology] = useState(0);
-    const [indexArea, setIndexArea] = useState(0);
+    const [area, setArea] = useState(areas[0]);
+    const [technology, setTechnology] = useState(technologies[0]);
 
     useEffect(() => {
 
-        const intervalTechnoly = setInterval(() => {
+        const interval = setInterval(() => {
 
-            setIndexTechnology(count => count + 1);
+            setArea(Random.nextEl(areas));
+            setTechnology(Random.nextEl(technologies));
 
         }, 2000);
 
-        const intervalArea = setInterval(() => {
-
-            setIndexArea(count => count + 1);
-
-        }, 3000);
-
-        return () => clearInterval(intervalTechnoly) && clearInterval(intervalArea);
+        return () => clearInterval(interval);
     }, []);
-
-
-    if (indexTechnology == technologies.length) {
-        setIndexTechnology(0);
-    }
-    if (indexArea == areas.length) {
-        setIndexArea(0);
-    }
 
     return (
         <Layout menu="Home">
             <div className="text-center banner">
                 <div className="mb-5">
-                    <h1 className="fw-bold text-dark">{technologies[indexTechnology]}</h1>
-                    <h2>applied to {areas[indexArea]}</h2>
+                    <h1 className="fw-bold text-dark">{technology}</h1>
+                    <h2>applied to {area}</h2>
                 </div>
                 <p className="mb-5 text-center">{Package.description}</p>
                 <div className="mb-5">
