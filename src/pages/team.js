@@ -1,40 +1,19 @@
 import { Col, Row } from "react-bootstrap";
 import yaml from "js-yaml";
+
 import Layout from "../components/layout/Layout";
 import PathUtils from "../utils/path-utils";
-
-function Member({ id, name, position, img, url, when }) {
-
-    return <>
-        <div className="member" key={id}>
-            <div className="d-flex">
-                <div className="flex-shrink-0">
-                    <a href={url} target="_blank">
-                        <img className="rounded" src={`images/profile-photo/${img}`} width={65} />
-                    </a>
-                </div>
-                <div className="flex-grow-1 ms-2">
-                    <p className="text-dark fw-bold mb-0">{name}</p>
-                    <p className="mb-0">{position}</p>
-                    <p className="small text-start text-secondary">{when}</p>
-                </div>
-            </div>
-        </div >
-    </>;
-}
+import Section from "../components/Section";
+import TeamMember from "../components/TeamMember";
 
 function Group({ children }) {
 
     if (!children || children.length === 0) {
-        children = <p>To be Announced</p>;
-    }
-
-    if (!Array.isArray(children)) {
-        children = [children];
+        return <></>;
     }
 
     const columns = children.map((child, i) =>
-        <Col xs={12} sm={6} key={i} >
+        <Col xs={12} sm={6} md={4} lg={3} key={i} >
             {child}
         </Col>
     );
@@ -47,8 +26,8 @@ function Group({ children }) {
 function filterOutFaculty(faculty, status) {
 
     return faculty.filter(el => el.status === status).map((p, i) => {
-        return <Member
-            id={i}
+        return <TeamMember
+            key={i}
             name={p.name}
             position={p.position}
             img={p.image}
@@ -61,8 +40,8 @@ function filterOutFaculty(faculty, status) {
 function filterOutStudents(students, status, degree) {
 
     return students.filter(el => el.status === status && el.degree === degree).map((el, i) => {
-        return <Member
-            id={i}
+        return <TeamMember
+            key={i}
             name={el.name}
             position={el.position}
             img={el.image}
@@ -79,49 +58,50 @@ function TeamPage({ students, faculty }) {
 
             <p>Meet our team! Click on profile picture to open their personal websites.</p>
 
-            <h4 className="text-dark">Principal Investigator</h4>
-            <hr />
+            <Section>
+                <Section.Title>Principal Investigator</Section.Title>
+                <Group>
+                    {filterOutFaculty(faculty, "pi")}
+                </Group>
+            </Section>
 
-            <Group>
-                {filterOutFaculty(faculty, "pi")}
-            </Group>
+            <Section>
+                <Section.Title>Affiliated Faculty Members</Section.Title>
+                <Group>
+                    {filterOutFaculty(faculty, "affiliated")}
+                </Group>
+            </Section>
 
-            <h4 className="text-dark">Affiliated Faculty Members</h4>
-            <hr />
+            <Section>
+                <Section.Title>Current Ph.D. Students</Section.Title>
+                <Group>
+                    {filterOutStudents(students, "current", "phd")}
+                </Group>
+            </Section>
 
-            <Group>
-                {filterOutFaculty(faculty, "affiliated")}
-            </Group>
+            <Section>
+                <Section.Title>Current Master's Students</Section.Title>
+                <Group>
+                    {filterOutStudents(students, "current", "master")}
+                </Group>
+            </Section>
 
-            <h4 className="text-dark">Current Ph.D. Students</h4>
-            <hr />
+            <Section>
+                <Section.Title>Current Undergraduate Students</Section.Title>
+                <Group>
+                    {filterOutStudents(students, "current", "undergraduate")}
+                </Group>
+            </Section>
 
-            <Group>
-                {filterOutStudents(students, "current", "phd")}
-            </Group>
+            <Section>
+                <Section.Title>Alumni</Section.Title>
 
-            <h4 className="text-dark">Current Master's Students</h4>
-            <hr />
+                <p className="mb-3 mt-3 text-light">Undergraduate Students</p>
 
-            <Group>
-                {filterOutStudents(students, "current", "master")}
-            </Group>
-
-            <h4 className="text-dark">Current Undergraduate Students</h4>
-            <hr />
-
-            <Group>
-                {filterOutStudents(students, "current", "undergraduate")}
-            </Group>
-
-            <h4 className="text-dark">Alumni</h4>
-            <hr />
-
-            <p className="mb-3 mt-3 text-light">Undergraduate Students</p>
-
-            <Group>
-                {filterOutStudents(students, "former", "undergraduate")}
-            </Group>
+                <Group>
+                    {filterOutStudents(students, "former", "undergraduate")}
+                </Group>
+            </Section>
 
         </Layout>
     );
