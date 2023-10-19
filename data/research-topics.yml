@@ -7,6 +7,8 @@ technologies:
   - Ant Colony Optimization
   - Simulated Annealing
   - Tabu Search
+  - Differential Evolution
+  - Particle Swarm Optimization
 
 areas:
   - Software Requirements
