@@ -4,23 +4,7 @@ import Link from "next/link";
 
 import Package from "../../package.json";
 import Random from "../utils/Random";
-
-const technologies = [
-    "Genetic Algorithms",
-    "Evolutionary Algorithms",
-    "Bio-inspired Algorithms",
-    "Ant Colony Optimization",
-    "Simulated Annealing",
-    "Tabu Search",
-];
-
-const areas = [
-    "Software Requirements",
-    "Software Testing",
-    "Software Maintenance",
-    "Software Refactoring",
-    "Software Product Lines"
-];
+import YAML from "../utils/YAML";
 
 function SocialIcon({ href, icon, children }) {
 
@@ -31,7 +15,7 @@ function SocialIcon({ href, icon, children }) {
     );
 }
 
-export default function IndexPage() {
+export default function IndexPage({ areas, technologies }) {
 
     const [area, setArea] = useState(areas[0]);
     const [technology, setTechnology] = useState(technologies[0]);
@@ -65,4 +49,13 @@ export default function IndexPage() {
             </div>
         </Layout>
     );
+}
+
+export async function getStaticProps() {
+
+    const researchTopics = await YAML.read("data", "research-topics.yml");
+
+    return {
+        props: researchTopics
+    };
 }
