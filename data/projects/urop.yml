@@ -7,8 +7,6 @@ projects:
   - title: Arduino-powered Autonomous 'Follow Me' Car With Obstacle Avoidance
     description: An autonomous “Follow me” car is a self-driving vehicle that can navigate itself without human intervention to follow a person wherever he/she moves. Complex autonomous driving algorithms, including perception, localization, planning, and control, are needed for autonomous driving, along with a wide variety of heterogeneous sensors, actuators, and computers. In this project, the students will build a prototype for an autonomous “follow me” car powered by Arduino. By using ultrasound sensors and actuators as electric motors, the car will follow a person through GPS location avoiding obstacles by predicting the safest pathway to reach the target. The students will read research papers on predictive models by using machine learning and implement them in the car. The data collected by the ultrasound sensors will be used for training and validation. Experiments will be carried out to compare the performance by using a naive avoidance algorithm (such as those using if-statements) against predictive models.
     url: https://umflint.infoready4.com/#competitionDetail/1891954
-    targets:
-      - undergraduate
     status: Closed
 
   - title: Mining and Data Analysis on GitHub Repositories

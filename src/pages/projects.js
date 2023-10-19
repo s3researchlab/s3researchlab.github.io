@@ -11,18 +11,6 @@ function generateResearchProject(project) {
 
     const id = IdUtils.generateId(project.title);
 
-    const badgeColors = {
-        "phd": "warning",
-        "master": "info",
-        "undergraduate": "success",
-    };
-
-    const buttonColors = {
-        "Soon": "warning",
-        "Open": "success",
-        "Closed": "outline-secondary",
-    };
-
     const url = project.status == "Closed" ? "" : project.url;
 
     return (
@@ -35,11 +23,6 @@ function generateResearchProject(project) {
                     </Link>
                 </div>
             </CollapseGroup>
-            <div>
-                {project.targets.map((target, key) => {
-                    return <Badge bg={badgeColors[target]} text="dark" className="me-2" key={key}>{target}</Badge>;
-                })}
-            </div>
         </ListGroup.Item>
     );
 }
