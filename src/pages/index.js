@@ -5,12 +5,19 @@ import Link from "next/link";
 import Package from "../../package.json";
 
 const technologies = [
-    "Machine Learning",
+    "Genetic Algorithms",
     "Evolutionary Algorithms",
-    "Natural Language Processing",
     "Bio-inspired Algorithms",
-    "Artificial Intelligence",
-    "Deep Learning",
+    "Ant Colony Optimization",
+    "Simulated Annealing",
+    "Tabu Search",
+];
+
+const areas = [
+    "Software Requirements",
+    "Software Testing",
+    "Software Maintenance",
+    "Software Refactoring",
 ];
 
 function SocialIcon({ href, icon, children }) {
@@ -24,30 +31,40 @@ function SocialIcon({ href, icon, children }) {
 
 export default function IndexPage() {
 
-    const [index, setIndex] = useState(0);
+    const [indexTechnology, setIndexTechnology] = useState(0);
+    const [indexArea, setIndexArea] = useState(0);
 
     useEffect(() => {
 
-        const interval = setInterval(() => {
+        const intervalTechnoly = setInterval(() => {
 
-            setIndex(count => count + 1);
+            setIndexTechnology(count => count + 1);
 
-        }, 2500);
+        }, 2000);
 
-        return () => clearInterval(interval);
+        const intervalArea = setInterval(() => {
+
+            setIndexArea(count => count + 1);
+
+        }, 3000);
+
+        return () => clearInterval(intervalTechnoly) && clearInterval(intervalArea);
     }, []);
 
 
-    if (index == technologies.length) {
-        setIndex(0);
+    if (indexTechnology == technologies.length) {
+        setIndexTechnology(0);
+    }
+    if (indexArea == areas.length) {
+        setIndexArea(0);
     }
 
     return (
         <Layout menu="Home">
             <div className="text-center banner">
                 <div className="mb-5">
-                    <h1 className="fw-bold text-dark">{technologies[index]}</h1>
-                    <h2>applied to software systems development</h2>
+                    <h1 className="fw-bold text-dark">{technologies[indexTechnology]}</h1>
+                    <h2>applied to {areas[indexArea]}</h2>
                 </div>
                 <p className="mb-5 text-center">{Package.description}</p>
                 <div className="mb-5">
