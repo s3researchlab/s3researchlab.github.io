@@ -36,14 +36,13 @@ function TopBar() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto"></Nav>
+                    <Nav>
                         <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
                         <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
                         <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
                         <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
                         <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
-                    </Nav>
-                    <Nav>
                         <DarkModeNavItem />
                     </Nav>
                 </Navbar.Collapse>
