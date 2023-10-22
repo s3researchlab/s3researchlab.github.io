@@ -22,8 +22,11 @@ $primary: $dracula-purple;
 $success: $dracula-green;
 $info: $dracula-cyan;
 $warning: $dracula-orange;
-
 $dark: #15171B;
+
+$navbar-light-active-color: $primary;
+$navbar-dark-active-color: $primary;
+
 $body-bg-dark: #1D1E25;
 $body-color-dark: $dracula-disabled;
 
@@ -120,23 +123,6 @@ main {
 }
 
 .navbar {
-
-    flex-direction: column !important;
-
-    .nav-link {
-
-        color: $dracula-white !important;
-
-        i.bi {
-            margin-right: 0.5rem !important;
-            color: $dracula-cyan !important
-        }
-
-        &:hover,
-        &.active {
-            border-bottom: 1px solid $dracula-cyan;
-        }
-    }
 
     .navbar-toggler {
 

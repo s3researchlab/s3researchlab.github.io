@@ -58,7 +58,7 @@ function Item({ value, handleClick, selected = false }) {
     );
 }
 
-export default function DarkModeNavItem() {
+export default function NavLinkDarkMode() {
 
     const [colorTheme, setColorTheme] = useState(ColorThemes.AUTO);
 
@@ -108,6 +108,7 @@ export default function DarkModeNavItem() {
         <li className="nav-item dropdown dark-mode">
             <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                 <i className={`bi ${colorTheme.icon}`}></i>
+                <span className="ms-2 d-md-none">Color Scheme</span>
             </a>
             <ul className="dropdown-menu dropdown-menu-end p-1">
                 <Item value={ColorThemes.LIGHT} handleClick={handleClick} selected={colorTheme === ColorThemes.LIGHT} />

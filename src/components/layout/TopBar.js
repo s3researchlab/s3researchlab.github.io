@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { Container, Button, Navbar, Nav } from "react-bootstrap";
-import DarkModeNavItem from "../DarkModeNavItem";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import NavLinkDarkMode from "../NavLinkDarkMode";
 import { useRouter } from "next/router";
 
 function NavLink({ href, exact, children }) {
@@ -21,11 +21,11 @@ function NavLink({ href, exact, children }) {
     return <Link href={href} className={`nav-link ${isActive}`}>{children}</Link>;
 }
 
-function TopBar() {
+export default function TopBar() {
 
     return (
-        <Navbar expand="md" bg="dark" fixed="top">
-            <Container fluid>
+        <Navbar expand="md" bg="dark" fixed="top" data-bs-theme="dark">
+            <Container>
                 <Navbar.Brand href="/">
                     <img
                         src="images/logo.png"
@@ -38,17 +38,18 @@ function TopBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto"></Nav>
                     <Nav>
-                        {/* <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink> */}
-                        <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
-                        <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
-                        <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
-                        <NavLink href="/contact"><i className="bi bi-envelope"></i>Contact</NavLink>
-                        <DarkModeNavItem />
+                        <NavLink href="/team">Team</NavLink>
+                        <NavLink href="/projects">Projects</NavLink>
+                        <NavLink href="/publications">Publications</NavLink>
+                        <NavLink href="/contact">Contact</NavLink>
+                        <li className="nav-item">
+                            <div className="vr d-none d-md-flex h-100 mx-md-2 text-white"></div>
+                            <hr className="d-md-none my-2 text-white-50" />
+                        </li>
+                        <NavLinkDarkMode />
                     </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
 }
-
-export default TopBar;
