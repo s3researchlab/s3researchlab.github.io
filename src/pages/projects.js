@@ -16,7 +16,7 @@ function generateResearchProject(project) {
     return (
         <ListGroup.Item className="d-flex justify-content-between align-items-center" key={id}>
             <CollapseGroup title={project.title} collapsed={true}>
-                <p className="small text-secondary">{project.description}</p>
+                <p className="text-secondary">{project.description}</p>
                 <div className="my-2">
                     <Link href={url} target="_blank">
                         Apply Now!
