@@ -27,7 +27,7 @@ export default function IndexPage({ areas, technologies }) {
             setArea(Random.nextEl(areas));
             setTechnology(Random.nextEl(technologies));
 
-        }, 2000);
+        }, 1500);
 
         return () => clearInterval(interval);
     }, []);
