@@ -38,6 +38,7 @@ export default function TopBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto"></Nav>
                     <Nav>
+                        <NavLink href="/" exact={true}>Home</NavLink>
                         <NavLink href="/team">Team</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
                         <NavLink href="/publications">Publications</NavLink>
