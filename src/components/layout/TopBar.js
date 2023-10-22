@@ -38,7 +38,7 @@ function TopBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto"></Nav>
                     <Nav>
-                        <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink>
+                        {/* <NavLink href="/" exact><i className="bi bi-house"></i>Home</NavLink> */}
                         <NavLink href="/team"><i className="bi bi-people"></i>Team</NavLink>
                         <NavLink href="/projects"><i className="bi bi-table"></i>Projects</NavLink>
                         <NavLink href="/publications"><i className="bi bi-file-earmark-text"></i>Publications</NavLink>
