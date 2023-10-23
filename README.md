@@ -1,3 +1,4 @@
-<img src="https://user-images.githubusercontent.com/114015/191831247-83696236-4b4b-4207-9cb8-079ea7c9392b.png" width="100%"/>
 
-S3 Research Lab's Website
+<img src="https://raw.githubusercontent.com/s3researchlab/s3researchlab.github.io/main/public/images/logo.png" width="50%"/>
+
+We are a research lab focused on Computational Search for advancing Software Engineering methodologies and technologies
