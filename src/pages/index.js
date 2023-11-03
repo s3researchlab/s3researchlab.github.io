@@ -35,15 +35,16 @@ export default function IndexPage({ areas, technologies }) {
     return (
         <Layout menu="Home">
             <div className="text-center banner">
-                <div className="mb-5">
-                    <h1 className="fw-bold text-dark">{technology}</h1>
-                    <h2>applied to {area}</h2>
+                <div className="pt-5">
+                    <h2 className="fw-bold text-dark">{technology}</h2>
+                    <h3 className="my-2">applied to</h3>
+                    <h2 className="fw-bold text-dark">{area}</h2>
                 </div>
-                <p className="mb-5 text-center">{Package.description}</p>
-                <div className="mb-5">
+                <p className="pt-3 text-center">{Package.description}</p>
+                <div className="pt-3">
                     <Link href="./projects" className="btn btn-primary">Explore Projects</Link>
                 </div>
-                <div>
+                <div className="pt-3">
                     <SocialIcon icon="bi bi-github" href="https://github.com/s3researchlab">GitHub</SocialIcon>
                 </div>
             </div>
