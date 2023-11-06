@@ -26,11 +26,10 @@ export default function TopBar() {
     return (
         <Navbar expand="md" bg="dark" fixed="top" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/" className="d-flex align-items-center">
                     <img
                         src="images/logo.png"
-                        width="169"
-                        height="32"
+                        height="22"
                         className="d-inline-block align-top"
                     />
                 </Navbar.Brand>
