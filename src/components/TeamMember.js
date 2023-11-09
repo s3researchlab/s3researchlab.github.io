@@ -5,7 +5,7 @@ export default function TeamMember({ name, position, img, url, when }) {
             <div className="d-flex">
                 <div className="flex-shrink-0">
                     <a href={url} target="_blank">
-                        <img className="rounded" src={`images/profile-photo/${img}`} width={65} />
+                        <img className="rounded" src={`/images/profile-photo/${img}`} width={65} />
                     </a>
                 </div>
                 <div className="flex-grow-1 ms-2 text-start">

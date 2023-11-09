@@ -1,8 +1,8 @@
 import { Col, Row } from "react-bootstrap";
-import yaml from "js-yaml";
+import Link from "next/link";
 
+import YAML from "../utils/YAML";
 import Layout from "../components/layout/Layout";
-import PathUtils from "../utils/path-utils";
 import Section from "../components/Section";
 import TeamMember from "../components/TeamMember";
 
@@ -51,7 +51,7 @@ function filterOutStudents(students, status, degree) {
     });
 }
 
-function TeamPage({ students, faculty }) {
+export default function TeamPage({ students, faculty }) {
 
     return (
         <Layout menu="Team">
@@ -93,15 +93,7 @@ function TeamPage({ students, faculty }) {
                 </Group>
             </Section>
 
-            <Section>
-                <Section.Title>Alumni</Section.Title>
-
-                <p className="mb-3 mt-3 text-light">Undergraduate Students</p>
-
-                <Group>
-                    {filterOutStudents(students, "former", "undergraduate")}
-                </Group>
-            </Section>
+            <p className="mt-3"><Link href="/team/alumni">Click here for Alumni</Link></p>
 
         </Layout>
     );
@@ -109,14 +101,8 @@ function TeamPage({ students, faculty }) {
 
 export async function getStaticProps() {
 
-    const studentsFile = PathUtils.get("data", "team", "students.yml");
-    const facultyFile = PathUtils.get("data", "team", "faculty.yml");
-
-    const studentContent = await PathUtils.readFileContent(studentsFile);
-    const facultyContent = await PathUtils.readFileContent(facultyFile);
-
-    const students = yaml.load(studentContent);
-    const faculty = yaml.load(facultyContent);
+    const students = await YAML.read("data", "team", "students.yml");
+    const faculty = await YAML.read("data", "team", "faculty.yml");
 
     return {
         props: {
@@ -125,5 +111,3 @@ export async function getStaticProps() {
         },
     };
 }
-
-export default TeamPage;

@@ -28,7 +28,7 @@ export default function TopBar() {
             <Container>
                 <Navbar.Brand href="/" className="d-flex align-items-center">
                     <img
-                        src="images/logo.png"
+                        src="/images/logo.png"
                         height="22"
                         className="d-inline-block align-top"
                     />
