@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../schemas/research-topics.schema.json
+# yaml-language-server: $schema=./research-topics.schema.json
 
 technologies:
   - Genetic Algorithms
