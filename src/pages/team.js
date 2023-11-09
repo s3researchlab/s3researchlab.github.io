@@ -1,57 +1,37 @@
-import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 
+import Array from "../utils/Array";
 import YAML from "../utils/YAML";
 import Layout from "../components/layout/Layout";
 import Section from "../components/Section";
 import TeamMember from "../components/TeamMember";
+import TeamGroup from "../components/TeamGroup";
 
-function Group({ children }) {
+export default function TeamPage({ pi, affiliated, undergraduate, master, phd, postdoc }) {
 
-    if (!children || children.length === 0) {
-        return <></>;
-    }
-
-    const columns = children.map((child, i) =>
-        <Col xs={12} sm={6} md={4} lg={3} key={i} >
-            {child}
-        </Col>
-    );
-
-    return <Row>
-        {columns}
-    </Row>;
-}
-
-function filterOutFaculty(faculty, status) {
-
-    return faculty.filter(el => el.status === status).map((p, i) => {
-        return <TeamMember
-            key={i}
-            name={p.name}
-            position={p.position}
-            image={p.image}
-            when={p.affiliation}
-            url={p.url}
-        />;
+    const piAsHTML = pi.map((el, i) => {
+        return <TeamMember key={i} {...el} faculty={true} />;
     });
-}
 
-function filterOutStudents(students, status, degree) {
-
-    return students.filter(el => el.status === status && el.degree === degree).map((el, i) => {
-        return <TeamMember
-            key={i}
-            name={el.name}
-            position={el.position}
-            image={el.image}
-            when={el.when}
-            url={el.url}
-        />;
+    const affiliatedAsHTML = affiliated.map((el, i) => {
+        return <TeamMember key={i} {...el} faculty={true}/>;
     });
-}
 
-export default function TeamPage({ students, faculty }) {
+    const undergraduateAsHTML = undergraduate.map((el, i) => {
+        return <TeamMember key={i} {...el} />;
+    });
+
+    const masterAsHTML = master.map((el, i) => {
+        return <TeamMember key={i} {...el} />;
+    });
+
+    const phdAsHTML = phd.map((el, i) => {
+        return <TeamMember key={i} {...el} />;
+    });
+
+    const postdocAsHTML = postdoc.map((el, i) => {
+        return <TeamMember key={i} {...el} />;
+    });
 
     return (
         <Layout menu="Team">
@@ -60,40 +40,47 @@ export default function TeamPage({ students, faculty }) {
 
             <Section>
                 <Section.Title>Principal Investigator</Section.Title>
-                <Group>
-                    {filterOutFaculty(faculty, "pi")}
-                </Group>
+                <TeamGroup>
+                    {piAsHTML}
+                </TeamGroup>
             </Section>
 
             <Section>
                 <Section.Title>Affiliated Faculty Members</Section.Title>
-                <Group>
-                    {filterOutFaculty(faculty, "affiliated")}
-                </Group>
+                <TeamGroup>
+                    {affiliatedAsHTML}
+                </TeamGroup>
             </Section>
-
-            {/* <Section>
-                <Section.Title>Current Ph.D. Students</Section.Title>
-                <Group>
-                    {filterOutStudents(students, "current", "phd")}
-                </Group>
-            </Section> */}
-
-            {/* <Section>
-                <Section.Title>Current Master's Students</Section.Title>
-                <Group>
-                    {filterOutStudents(students, "current", "master")}
-                </Group>
-            </Section> */}
 
             <Section>
-                <Section.Title>Current Undergraduate Students</Section.Title>
-                <Group>
-                    {filterOutStudents(students, "current", "undergraduate")}
-                </Group>
+                <Section.Title>Postdoctoral Researcher Fellows</Section.Title>
+                <TeamGroup>
+                    {postdocAsHTML}
+                </TeamGroup>
             </Section>
 
-            <p className="mt-3"><Link href="/team/alumni">Click here for Alumni</Link></p>
+            <Section>
+                <Section.Title>Ph.D. Students</Section.Title>
+                <TeamGroup>
+                    {phdAsHTML}
+                </TeamGroup>
+            </Section>
+
+            <Section>
+                <Section.Title>Master's Students</Section.Title>
+                <TeamGroup>
+                    {masterAsHTML}
+                </TeamGroup>
+            </Section>
+
+            <Section>
+                <Section.Title>Undergraduate Students</Section.Title>
+                <TeamGroup>
+                    {undergraduateAsHTML}
+                </TeamGroup>
+            </Section>
+
+            <p className="py-3"><Link href="/team/alumni">Click here for Alumni</Link></p>
 
         </Layout>
     );
@@ -101,13 +88,18 @@ export default function TeamPage({ students, faculty }) {
 
 export async function getStaticProps() {
 
-    const students = await YAML.read("data", "team", "students.yml");
-    const faculty = await YAML.read("data", "team", "faculty.yml");
+    const team = await YAML.read("data", "team.yml");
+
+    const members = Array.filter(team, { status: "active" });
 
     return {
         props: {
-            students,
-            faculty
+            pi: Array.filter(members, { role: "pi" }),
+            affiliated: Array.filter(members, { role: "affiliated" }),
+            undergraduate: Array.filter(members, { role: "undergraduate" }),
+            master: Array.filter(members, { role: "master" }),
+            phd: Array.filter(members, { role: "phd" }),
+            postdoc: Array.filter(members, { role: "postdoc" })
         },
     };
 }

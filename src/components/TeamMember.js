@@ -1,4 +1,6 @@
-export default function TeamMember({ name, position, image, url, when }) {
+export default function TeamMember({ name, role, image, position, affiliation, url, when }) {
+
+    const secondary = ["pi", "affiliated"].includes(role) ? affiliation : when;
 
     return <>
         <div className="team-member">
@@ -11,7 +13,7 @@ export default function TeamMember({ name, position, image, url, when }) {
                 <div className="flex-grow-1 ms-2 text-start">
                     <p className="text-dark fw-bold mb-0">{name}</p>
                     <p className="small mb-0">{position}</p>
-                    <p className="small text-start text-secondary">{when}</p>
+                    <p className="small text-start text-secondary">{secondary}</p>
                 </div>
             </div>
         </div >
