@@ -47,6 +47,14 @@ body {
     line-height: 1.5;
     text-align: justify;
     margin-top: 70px;
+
+    main a {
+        color: $primary;
+
+        &:hover {
+            color: darken($primary, 5%);
+        }
+    }
 }
 
 @include color-mode(dark) {
