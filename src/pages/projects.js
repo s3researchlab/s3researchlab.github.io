@@ -1,51 +1,30 @@
-import yaml from "js-yaml";
 import Link from "next/link";
-import { Card, ListGroup, Button, Badge } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 
 import CollapseGroup from "../components/CollapseGroup";
 import Layout from "../components/layout/Layout";
-import PathUtils from "../utils/path-utils";
-import IdUtils from "../utils/id-utils";
+import YAML from "../utils/YAML";
+import Array from "../utils/Array";
+import Section from "../components/Section";
 
-function generateResearchProject(project) {
+function generateInitiative(i, initiative) {
 
-    const id = IdUtils.generateId(project.title);
-
-    const url = project.status == "Closed" ? "" : project.url;
-
-    return (
-        <ListGroup.Item className="d-flex justify-content-between align-items-center" key={id}>
+    const projectsAsHTML = initiative.projects.map((project, index) =>
+        <ListGroup.Item key={index} className="d-flex justify-content-between align-items-center">
             <CollapseGroup title={project.title} collapsed={true}>
                 <p className="text-secondary">{project.description}</p>
-                <div className="my-2">
-                    <Link href={url} target="_blank">
-                        Apply Now!
-                    </Link>
-                </div>
+                <Link href={project.url} target="_blank">Apply Now!</Link>
             </CollapseGroup>
         </ListGroup.Item>
     );
-}
-function generateResearchInitiative(initiative) {
 
-    if (!initiative.active) {
-        return <></>;
-    }
-
-    const key = IdUtils.generateId(initiative.name);
-
-    const projectsAsHTML = initiative.projects.map(p => {
-        return generateResearchProject(p);
-    });
-
-    return <div key={key}>
-        <h4 className="text-dark">{initiative.name}</h4>
-        <hr />
-        <p>{initiative.description}</p>
+    return <div key={i}>
+        <Section>
+            <Section.Title>{initiative.name}</Section.Title>
+            <p>{initiative.description}</p>
+        </Section>
         <Card className="my-4" >
-            <Card.Header>
-                Projects
-            </Card.Header>
+            <Card.Header>Projects</Card.Header>
             <ListGroup variant="flush">
                 {projectsAsHTML}
             </ListGroup>
@@ -53,10 +32,10 @@ function generateResearchInitiative(initiative) {
     </div>;
 }
 
-function ProjectsPage({ initiatives }) {
+export default function ProjectsPage({ initiatives }) {
 
-    const initiativesAsHTML = initiatives.map(initiative => {
-        return generateResearchInitiative(initiative);
+    const initiativesAsHTML = initiatives.map((el, i) => {
+        return generateInitiative(i, el);
     });
 
     return (
@@ -72,19 +51,11 @@ function ProjectsPage({ initiatives }) {
 
 export async function getStaticProps() {
 
-    const dir = PathUtils.get("data", "projects");
-
-    const files = await PathUtils.listFiles(dir);
-
-    const contents = await Promise.all(files.map(PathUtils.readFileContent));
-
-    const initiatives = contents.map(yaml.load);
+    const initiatives = await YAML.read("data", "projects.yml");
 
     return {
         props: {
-            initiatives
+            initiatives: Array.filter(initiatives, { active: true })
         },
     };
 }
-
-export default ProjectsPage;

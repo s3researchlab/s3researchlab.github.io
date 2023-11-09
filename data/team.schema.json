@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://https://s3researchlab.github.io/schemas/team.schema.json",
+    "$id": "https://https://s3researchlab.github.io/team.schema.json",
     "type": "array",
         "items": {
             "type": "object",
