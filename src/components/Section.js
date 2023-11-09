@@ -6,9 +6,12 @@ function Title({ children }) {
 }
 
 export default function Section({ children }) {
-    return <>
-        {children}
-    </>;
+
+    if (children[1].props.children.length === 0) {
+        return <></>;
+    }
+
+    return children;
 }
 
 Section.Title = Title;
