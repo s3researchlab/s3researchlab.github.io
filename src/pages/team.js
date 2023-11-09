@@ -9,29 +9,12 @@ import TeamGroup from "../components/TeamGroup";
 
 export default function TeamPage({ pi, affiliated, undergraduate, master, phd, postdoc }) {
 
-    const piAsHTML = pi.map((el, i) => {
-        return <TeamMember key={i} {...el} faculty={true} />;
-    });
-
-    const affiliatedAsHTML = affiliated.map((el, i) => {
-        return <TeamMember key={i} {...el} faculty={true}/>;
-    });
-
-    const undergraduateAsHTML = undergraduate.map((el, i) => {
-        return <TeamMember key={i} {...el} />;
-    });
-
-    const masterAsHTML = master.map((el, i) => {
-        return <TeamMember key={i} {...el} />;
-    });
-
-    const phdAsHTML = phd.map((el, i) => {
-        return <TeamMember key={i} {...el} />;
-    });
-
-    const postdocAsHTML = postdoc.map((el, i) => {
-        return <TeamMember key={i} {...el} />;
-    });
+    const piAsHTML = pi.map((el, i) => <TeamMember key={i} {...el} />);
+    const affiliatedAsHTML = affiliated.map((el, i) => <TeamMember key={i} {...el} />);
+    const postdocAsHTML = postdoc.map((el, i) => <TeamMember key={i} {...el} />);
+    const phdAsHTML = phd.map((el, i) => <TeamMember key={i} {...el} />);
+    const masterAsHTML = master.map((el, i) => <TeamMember key={i} {...el} />);
+    const undergraduateAsHTML = undergraduate.map((el, i) => <TeamMember key={i} {...el} />);
 
     return (
         <Layout menu="Team">
