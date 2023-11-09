@@ -5,13 +5,10 @@ function Title({ children }) {
     </>;
 }
 
-function Section({ children }) {
-
+export default function Section({ children }) {
     return <>
         {children}
     </>;
 }
 
 Section.Title = Title;
-
-export default Section;
