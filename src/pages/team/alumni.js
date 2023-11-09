@@ -4,6 +4,7 @@ import Layout from "../../components/layout/Layout";
 import Section from "../../components/Section";
 import TeamMember from "../../components/TeamMember";
 import YAML from "../../utils/YAML";
+import Array from "../../utils/Array";
 
 function Group({ children }) {
 
@@ -25,14 +26,7 @@ function Group({ children }) {
 export default function AlumniPage({ undergraduates }) {
 
     const undergraduatesAsHTML = undergraduates.map((el, i) => {
-        return <TeamMember
-            key={i}
-            name={el.name}
-            position={el.position}
-            img={el.image}
-            when={el.when}
-            url={el.url}
-        />;
+        return <TeamMember key={i} {...el}/>;
     });
 
     return (
@@ -54,8 +48,7 @@ export default function AlumniPage({ undergraduates }) {
 export async function getStaticProps() {
 
     const students = await YAML.read("data", "team", "students.yml");
-
-    const undergraduates = students.filter(el => el.status === "former" && el.degree === "undergraduate");
+    const undergraduates = Array.filter(students, { status: "former", degree: "undergraduate" });
 
     return {
         props: {

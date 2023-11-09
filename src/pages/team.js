@@ -30,7 +30,7 @@ function filterOutFaculty(faculty, status) {
             key={i}
             name={p.name}
             position={p.position}
-            img={p.image}
+            image={p.image}
             when={p.affiliation}
             url={p.url}
         />;
@@ -44,7 +44,7 @@ function filterOutStudents(students, status, degree) {
             key={i}
             name={el.name}
             position={el.position}
-            img={el.image}
+            image={el.image}
             when={el.when}
             url={el.url}
         />;
