@@ -1,7 +1,7 @@
 {
     "name": "s3researchlab.github.io",
     "description": "We are a research lab focused on Computational Search for advancing Software Engineering methodologies and technologies",
-    "version": "0.1.50",
+    "version": "0.1.51",
     "author": "S3 Research Lab",
     "license": "MIT",
     "homepage": "s3researchlab.github.io",
@@ -36,6 +36,7 @@
         "react": "18.2.0",
         "react-bootstrap": "2.9.1",
         "react-dom": "18.2.0",
-        "sass": "1.69.5"
+        "sass": "1.69.5",
+        "bibtex2html": "github:thiagodnf/bibtex2html"
     }
 }

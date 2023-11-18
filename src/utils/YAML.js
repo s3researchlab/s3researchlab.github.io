@@ -1,6 +1,6 @@
 import yaml from "js-yaml";
 
-import PathUtils from "./path-utils";
+import PathUtils from "./PathUtils";
 
 export default class YAML {
 

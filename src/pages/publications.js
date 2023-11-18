@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { Col } from "react-bootstrap";
 
 import Layout from "../components/layout/Layout";
 import CollapseGroup from "../components/CollapseGroup";
-import BibTexUtils from "../utils/bibtex-util";
-import { Col } from "react-bootstrap";
+
+import bibtex2html from "bibtex2html";
 
 const groups = {
     "journal": { order: 1, title: "Refereed Journal Papers" },
@@ -85,7 +86,7 @@ function filterOut(array, searchTerm = "") {
     });
 }
 
-function PublicationsPage({ entries }) {
+export default function PublicationsPage({ entries }) {
 
     const router = useRouter();
 
@@ -107,7 +108,7 @@ function PublicationsPage({ entries }) {
         setSearchTerm(value);
     }
 
-    let items = filterOut(entries.formatted, searchTerm);
+    let items = filterOut(entries, searchTerm);
 
     let groupedList = createGroupsBy(items, publicationType);
 
@@ -138,11 +139,13 @@ function PublicationsPage({ entries }) {
 
 export async function getStaticProps() {
 
+    const res = await fetch("https://raw.githubusercontent.com/thiagodnf/thiagodnf.github.io/main/data/references.bib");
+
+    const content = await res.text();
+
     return {
         props: {
-            entries: BibTexUtils.parse("data/references.bib")
-        },
+            entries: new bibtex2html().parse(content)
+        }
     };
 }
-
-export default PublicationsPage;
