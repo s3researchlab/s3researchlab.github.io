@@ -13,10 +13,11 @@ const groups = {
     "book": { order: 3, title: "Book Chapters" },
     "short-paper": { order: 4, title: "Refereed Short Papers, Videos, Demos, and Posters" },
     "no-proceedings": { order: 5, title: "Workshop and Conferences without Proceedings" },
-    "unrefereed": { order: 6, title: "Unrefereed Publications" },
-    "invited-talks": { order: 7, title: "Major Invited Talks" },
-    "thesis": { order: 8, title: "Thesis" },
-    "under-review": { order: 9, title: "Under Review" }
+    "invited-talks": { order: 6, title: "Major Invited Talks" },
+    "thesis": { order: 7, title: "Thesis" },
+    "unrefereed": { order: 8, title: "Unrefereed Publications" },
+    "unrefereed-poster": { order: 9, title: "Unrefereed Conference Posters" },
+    "under-review": { order: 10, title: "Under Review" }
 };
 
 for (let i = 2000; i < 2040; i++) {
@@ -38,9 +39,9 @@ function createCollapseGroup(title, entries) {
 
     return (
         <CollapseGroup title={title} key={title}>
-            <ul>
+            <ol>
                 {items}
-            </ul>
+            </ol>
         </CollapseGroup>
     );
 }
