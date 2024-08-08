@@ -22,6 +22,42 @@
 
 ## Students
 
+- name: Zoiya Morell
+  role: master
+  image: zoiya-morell.jpeg
+  position: Graduate Student Research Assistant
+  affiliation: University of Michigan-Flint
+  url: https://www.linkedin.com/in/zoiya-morell/
+  when: 2024
+  status: active
+
+- name: Denish Patel
+  role: undergraduate
+  image: denish-patel.jpeg
+  position: Visiting Research Assistant
+  affiliation: Princeton University
+  url: https://www.linkedin.com/in/denishpatel13/
+  when: 2024
+  status: inactive
+
+- name: Dorah Mohamed
+  role: undergraduate
+  image: dorah-mohamed.jpeg
+  position: Visiting Research Assistant
+  affiliation: University of Michigan-Dearborn
+  url: https://www.linkedin.com/in/dorah-mohamed-353642292/
+  when: 2024
+  status: inactive
+
+- name: Asma Zribi
+  role: undergraduate
+  image: no-image.jpg
+  position: Visiting Research Assistant
+  affiliation: University of Michigan-Flint
+  url:
+  when: 2024
+  status: inactive
+
 - name: Karl Dahlstrom
   role: undergraduate
   image: no-image.jpg

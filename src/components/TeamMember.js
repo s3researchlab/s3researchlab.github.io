@@ -7,7 +7,7 @@ export default function TeamMember({ name, role, image, position, affiliation, u
             <div className="d-flex">
                 <div className="flex-shrink-0">
                     <a href={url} target="_blank">
-                        <img className="rounded" src={`/images/profile-photo/${image}`} width={65} />
+                        <img className="rounded" src={`/images/profile-photo/${image}`} width={85} />
                     </a>
                 </div>
                 <div className="flex-grow-1 ms-2 text-start">

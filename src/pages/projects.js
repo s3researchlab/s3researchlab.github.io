@@ -34,9 +34,15 @@ function generateInitiative(i, initiative) {
 
 export default function ProjectsPage({ initiatives }) {
 
-    const initiativesAsHTML = initiatives.map((el, i) => {
+    let initiativesAsHTML = initiatives.map((el, i) => {
         return generateInitiative(i, el);
     });
+
+    if(initiativesAsHTML.length === 0){
+        initiativesAsHTML = <p>No opportunities available right now. Please come back later</p>;
+    }
+
+    console.log(initiativesAsHTML.length)
 
     return (
         <Layout menu="Projects">

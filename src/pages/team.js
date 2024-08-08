@@ -19,7 +19,7 @@ export default function TeamPage({ pi, affiliated, undergraduate, master, phd, p
     return (
         <Layout menu="Team">
 
-            <p>Meet our team! Click on profile picture to open their personal websites.</p>
+            <p>Meet our team! Click on profile picture to open their personal websites or <Link href="/team/alumni">click here to see our alumni</Link></p>
 
             <Section>
                 <Section.Title>Principal Investigator</Section.Title>
